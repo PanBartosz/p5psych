@@ -43,7 +43,8 @@ function Experiment(url){
     };
 
     this.sendData = function(){
-        httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data}), function(result) {
+        var date = [year(), month(), day(), hour(), minute(), second()].join('-');
+        httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data, 'date' : date}), function(result) {
             noLoop();
             background(255);
             fill(0);
@@ -162,7 +163,8 @@ function Routine(){
 
 // Components
 
-function TextStimulus(s_text, s_text_size = 32, pos = [0.5, 0.5], col = [0,0,0], timestart = 0, timestop = null){
+function TextStimulus(name, s_text, s_text_size = 32, pos = [0.5, 0.5], col = [0,0,0], timestart = 0, timestop = null){
+    this.name = name;
     if (typeof s_text === "function"){
         this.text = s_text();
     } else{
@@ -231,13 +233,16 @@ function TextStimulus(s_text, s_text_size = 32, pos = [0.5, 0.5], col = [0,0,0],
 
 }
 
-function KeyboardResponse(keys = [ENTER]){
+function KeyboardResponse(name, keys = [ENTER], force_end_of_routine = true){
+    this.name = name;
     this.keys = keys;
     this.t_start = null;
     this.experiment = null;
     this.routine = null;
     this.lock = false;
     this.finished = false;
+    this.response = null;
+    this.force_end_of_routine = force_end_of_routine;
 
     this.setExperiment = function(experiment){
         this.experiment = experiment;
@@ -259,8 +264,13 @@ function KeyboardResponse(keys = [ENTER]){
         }
         if (keyIsPressed & this.keys.indexOf(keyCode) > -1 & !this.lock){
             this.lock = true;
-            this.experiment.addData({'rt': millis() - this.t_start, 'resp' : keyCode});
-            return false;
+            this.response = keyCode;
+            this.experiment.addData({name: this.name, 'rt': millis() - this.t_start, 'resp' : keyCode});
+            if (this.force_end_of_routine){
+                return false;
+            } else{
+                return true;
+            }
         } else {
             return true;
         };
@@ -268,7 +278,8 @@ function KeyboardResponse(keys = [ENTER]){
 }
 
 
-function ImageStimulus(img, rotation = 0, pos = [0.5,0.5], timestart = 0, timestop = null){
+function ImageStimulus(name, img, rotation = 0, pos = [0.5,0.5], timestart = 0, timestop = null){
+    this.name = name;
     if (typeof img === "function"){
         this.img = img();
     } else{
@@ -334,4 +345,101 @@ function ImageStimulus(img, rotation = 0, pos = [0.5,0.5], timestart = 0, timest
         this.t_start = t_start;
         this.finished = false;
     };
+}
+
+//TODO: Dopiero zacząłem...
+function ButtonResponse(name, label = 'Next', force_end_of_routine = true){
+    this.name = name;
+    this.t_start = null;
+    this.experiment = null;
+    this.routine = null;
+    this.force_end_of_routine = force_end_of_routine;
+
+    this.setExperiment = function(experiment){
+        this.experiment = experiment;
+    };
+
+    this.setRoutine = function(routine){
+        this.routine = routine;
+    };
+
+    this.draw = function(){};
+
+    this.start = function(t_start){
+        this.t_start = t_start;
+    };
+
+    this.update = function(){
+    };
+}
+
+//TODO: Slider powinien być od razu z metodą akceptacji, nie ma co się bawić w wyjątki... 
+function SliderComponent(name, min = 1, max = 7, step = 1, pos = [0.5, 0.65]){
+    this.name = name;
+    this.slider = null;
+    this.posx = pos[0];
+    this.posy = pos[1];
+    this.resp = null;
+
+    this.setExperiment = function(experiment){
+        this.experiment = experiment;
+    };
+
+    this.setRoutine = function(routine){
+        this.routine = routine;
+    };
+
+    this.start = function(t_start){
+        this.slider = createSlider(min, max, min, step);
+        this.slider.position(this.posx * width - width/8, this.posy * height);
+        this.slider.style('width', width/4 + 'px');
+        this.slider.elt.setAttribute('list', 'steplist');
+        dlist = document.createElement('datalist');
+        dlist.setAttribute('id', 'steplist');
+        for (var i = min; i<max+1; i++){
+            o = document.createElement('option');
+            o.innerHTML = i;
+            dlist.appendChild(o);
+        }
+        document.body.appendChild(dlist);
+    };
+
+    this.draw = function(){ };
+
+    this.update = function() {
+        this.resp = this.slider.value();
+    };
+    };
+
+
+
+function CodeComponent(name){
+    this.name = name;
+    this.every_frame = [];
+    this.at_the_start = [];
+
+    this.setExperiment = function(experiment){
+        this.experiment = experiment;
+    };
+
+    this.setRoutine = function(routine){
+        this.routine = routine;
+    };
+
+    this.start = function(t_start){
+        for (var i = 0; i < this.at_the_start.length; i++){
+            this.at_the_start[i]();
+        }
+    };
+
+
+    this.update = function(){
+        for (var i = 0; i < this.every_frame.length; i++){
+            this.every_frame[i]();
+        }
+
+    };
+
+    this.draw = function() {} ;
+
 }

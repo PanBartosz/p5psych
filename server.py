@@ -10,7 +10,7 @@ def saveData():
         data = simplejson.loads(request.data)
         print(data)
         data_df = pd.DataFrame(data['body'])
-        data_df.to_excel('test.xlsx')
+        data_df.to_excel(data['date'] + '.xlsx')
 
     return 'Success!'
 

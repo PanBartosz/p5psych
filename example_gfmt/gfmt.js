@@ -13,7 +13,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 
     var instr = new Routine();
-    instr.addComponent(new TextStimulus(
+    instr.addComponent(new TextStimulus('instruction',
         '\
         Welcome to our little experiment! \n  \
         Press Q if the faces are the same \n \
@@ -21,22 +21,22 @@ function setup() {
         Press ENTER to start an experiment! \n \
         '
     ));
-    instr.addComponent(new KeyboardResponse());
+    instr.addComponent(new KeyboardResponse('instr_resp'));
 
     var trials = new Loop(conditions, 2);
     var displayGFMTStimulus = new Routine();
-    displayGFMTStimulus.addComponent(new ImageStimulus(function () {return trials.currentTrial['image'];},
+    displayGFMTStimulus.addComponent(new ImageStimulus('faces_image', function () {return trials.currentTrial['image'];},
                                                        function () {return trials.currentTrial['rotation'];}));
-    displayGFMTStimulus.addComponent(new KeyboardResponse([113, 119]));
+    displayGFMTStimulus.addComponent(new KeyboardResponse('faces_response', [113, 119]));
 
     var interStimuliBreak = new Routine();
-    interStimuliBreak.addComponent(new TextStimulus('Next trial will start in a moment', 32, [0.5, 0.5], [0,0,0], 500, 1700));
+    interStimuliBreak.addComponent(new TextStimulus('break_text', 'Next trial will start in a moment', 32, [0.5, 0.5], [0,0,0], 500, 1700));
 
     trials.addRoutine(interStimuliBreak);
     trials.addRoutine(displayGFMTStimulus);
 
     var thanks = new Routine();
-    thanks.addComponent(new TextStimulus('Thank you for your paricipation', 32, [0.5,0.5], [0,0,0], 0, 2000));
+    thanks.addComponent(new TextStimulus('thankyou', 'Thank you for your paricipation', 32, [0.5,0.5], [0,0,0], 0, 2000));
 
 
     exp = new Experiment('http://localhost:5000/saveData');
