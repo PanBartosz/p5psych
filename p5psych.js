@@ -5,6 +5,7 @@ function Experiment(url){
     this.server_url = url;
     this.data = [];
     this.currentTrial = {};
+    this.expInfo = {};
 
     this.addRoutine = function(routine){
         this.routines.push(routine);
@@ -36,14 +37,17 @@ function Experiment(url){
     };
 
     this.addData = function(data){
-        var row = this.currentTrial;
+        var row = Object.assign({}, this.currentTrial);
+        for (var attr in this.expInfo) {row[attr] = this.expInfo[attr]; }
         for (var attr in data) {row[attr] = data[attr]; }
         this.data.push(row);
+        console.log(this.data);
         console.log(row);
     };
 
     this.sendData = function(){
         var date = [year(), month(), day(), hour(), minute(), second()].join('-');
+        //console.log(this.data);
         httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data, 'date' : date}), function(result) {
             noLoop();
             background(255);
@@ -265,7 +269,7 @@ function KeyboardResponse(name, keys = [ENTER], force_end_of_routine = true){
         if (keyIsPressed & this.keys.indexOf(keyCode) > -1 & !this.lock){
             this.lock = true;
             this.response = keyCode;
-            this.experiment.addData({name: this.name, 'rt': millis() - this.t_start, 'resp' : keyCode});
+            this.experiment.addData({name: this.name, 'rt': millis() - this.t_start, 'resp' : this.response});
             if (this.force_end_of_routine){
                 return false;
             } else{
@@ -347,39 +351,16 @@ function ImageStimulus(name, img, rotation = 0, pos = [0.5,0.5], timestart = 0, 
     };
 }
 
-//TODO: Dopiero zacząłem...
-function ButtonResponse(name, label = 'Next', force_end_of_routine = true){
-    this.name = name;
-    this.t_start = null;
-    this.experiment = null;
-    this.routine = null;
-    this.force_end_of_routine = force_end_of_routine;
 
-    this.setExperiment = function(experiment){
-        this.experiment = experiment;
-    };
-
-    this.setRoutine = function(routine){
-        this.routine = routine;
-    };
-
-    this.draw = function(){};
-
-    this.start = function(t_start){
-        this.t_start = t_start;
-    };
-
-    this.update = function(){
-    };
-}
-
-//TODO: Slider powinien być od razu z metodą akceptacji, nie ma co się bawić w wyjątki... 
-function SliderComponent(name, min = 1, max = 7, step = 1, pos = [0.5, 0.65]){
+function SliderResponse(name, label, confirm_label, min = 1, max = 7, step = 1, pos = [0.5, 0.65]){
     this.name = name;
     this.slider = null;
     this.posx = pos[0];
     this.posy = pos[1];
     this.resp = null;
+    this.t_start = null;
+    this.confirm_button = null;
+    this.clicked = false;
 
     this.setExperiment = function(experiment){
         this.experiment = experiment;
@@ -390,10 +371,17 @@ function SliderComponent(name, min = 1, max = 7, step = 1, pos = [0.5, 0.65]){
     };
 
     this.start = function(t_start){
+        this.t_start = t_start;
+        this.clicked = false;
         this.slider = createSlider(min, max, min, step);
         this.slider.position(this.posx * width - width/8, this.posy * height);
         this.slider.style('width', width/4 + 'px');
         this.slider.elt.setAttribute('list', 'steplist');
+        this.confirm_button = createButton(confirm_label);
+        this.confirm_button.position(this.posx * width, this.posy * height + 0.1*height);
+        s = this;
+        this.confirm_button.mousePressed(function(){s.clicked = true; console.log(this.clicked);});
+
         dlist = document.createElement('datalist');
         dlist.setAttribute('id', 'steplist');
         for (var i = min; i<max+1; i++){
@@ -408,6 +396,13 @@ function SliderComponent(name, min = 1, max = 7, step = 1, pos = [0.5, 0.65]){
 
     this.update = function() {
         this.resp = this.slider.value();
+        console.log(this.clicked);
+        if (this.clicked){
+            this.experiment.addData({name: this.name, 'rt': millis() - this.t_start, 'resp' : this.resp});
+            this.slider.remove();
+            this.confirm_button.remove();
+            return false;
+        }
     };
     };
 
@@ -442,4 +437,90 @@ function CodeComponent(name){
 
     this.draw = function() {} ;
 
+}
+
+
+
+function ExpInfoBox(data){
+    this.html_elements = [];
+    this.data = data;
+    this.clicked = false;
+
+
+    this.setExperiment = function(experiment){
+        this.experiment = experiment;
+    };
+
+    this.setRoutine = function(routine){
+        this.routine = routine;
+    };
+
+    this.start = function(){
+        var y = height/2 - 1/2*50*data.length;
+        for (var i=0; i< data.length; i++){
+            var input = createInput('');
+            input.position(width/2, y);
+            y += 50;
+            this.html_elements.push(input);
+        }
+
+        var button = createButton('Start');
+        button.position(width/2, y);
+        eb = this;
+        button.mousePressed(function () {eb.clicked = true;});
+        this.html_elements.push(button);
+
+    };
+
+    this.update = function(){
+        background(255);
+        var y = height/2 - 1/2*50*data.length;
+        for (var i=0; i< data.length; i++){
+            textSize(20);
+            textAlign(CENTER, TOP);
+            text(data[i], width/2 - 115, y);
+            y += 50;
+        };
+        if (this.clicked){
+            expInfo = {};
+            for (var i=0; i < data.length; i++){
+                expInfo[data[i]] = this.html_elements[i].value();
+            }
+            this.experiment.expInfo = expInfo;
+            for (var j = 0; j < this.html_elements.length; j++){
+                this.html_elements[j].remove();
+            }
+            console.log(expInfo);
+            return true;
+        };
+    };
+
+}
+
+
+
+//TODO: Dopiero zacząłem...
+function ButtonResponse(name, label = 'Next', force_end_of_routine = true){
+    this.name = name;
+    this.t_start = null;
+    this.experiment = null;
+    this.routine = null;
+    this.force_end_of_routine = force_end_of_routine;
+
+    this.setExperiment = function(experiment){
+        this.experiment = experiment;
+    };
+
+    this.setRoutine = function(routine){
+        this.routine = routine;
+    };
+
+    this.draw = function(){};
+
+    this.start = function(t_start){
+        this.t_start = t_start;
+    };
+
+    this.update = function(){
+    };
 }

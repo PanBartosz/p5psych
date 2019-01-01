@@ -1,6 +1,7 @@
 from flask import Flask, request, send_from_directory
 import pandas as pd
 import simplejson
+from pprint import pprint as print
 
 app = Flask(__name__)
 

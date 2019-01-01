@@ -2,6 +2,8 @@ var exp;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+
+
     var conditions = [
         {'sentence' : 'This is a first sentence'},
         {'sentence' : 'This is a second sentence'},
@@ -59,7 +61,7 @@ function setup() {
 
     var likenessRating = new Routine();
     likenessRating.addComponent(new TextStimulus('like_text', 'Did you like that sentence?', 32, [0.5, 0.5], [0,0,0]));
-    likenessRating.addComponent(new SliderComponent());
+    likenessRating.addComponent(new SliderResponse('sliderLikeness', '1=a little bit, 7=very much', 'next trial'));
 
     trials.addRoutine(interStimuliBreak);
     trials.addRoutine(displaySentence);
@@ -71,6 +73,10 @@ function setup() {
 
     exp = new Experiment('http://localhost:5000/saveData');
 
+
+    var exp_info_box = new ExpInfoBox(['participant', 'sex (M/F)', 'age', 'gender']);
+
+    exp.addRoutine(exp_info_box);
     exp.addRoutine(instr);
     exp.addRoutine(trials);
     exp.addRoutine(thanks);
