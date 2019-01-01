@@ -35,10 +35,10 @@ function setup() {
     trials.addRoutine(displayStroopStimulus);
 
     var thanks = new Routine();
-    thanks.addComponent(new TextStimulus('Thank you for your paricipation'));
+    thanks.addComponent(new TextStimulus('Thank you for your paricipation', 32, [0.5,0.5], [0,0,0], 0, 2000));
 
 
-    exp = new Experiment();
+    exp = new Experiment('http://localhost:5000/saveData');
 
     exp.addRoutine(instr);
     exp.addRoutine(trials);

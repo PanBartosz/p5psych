@@ -36,10 +36,10 @@ function setup() {
     trials.addRoutine(displayGFMTStimulus);
 
     var thanks = new Routine();
-    thanks.addComponent(new TextStimulus('Thank you for your paricipation'));
+    thanks.addComponent(new TextStimulus('Thank you for your paricipation', 32, [0.5,0.5], [0,0,0], 0, 2000));
 
 
-    exp = new Experiment();
+    exp = new Experiment('http://localhost:5000/saveData');
 
     exp.addRoutine(instr);
     exp.addRoutine(trials);
@@ -52,71 +52,3 @@ function draw() {
 }
 
 
-function ImageStimulus(img, rotation = 0, pos = [0.5,0.5], timestart = 0, timestop = null){
-    if (typeof img === "function"){
-        this.img = img();
-    } else{
-        this.img = img;
-    }
-
-    if (typeof rotation === "function"){
-        this.rotation = rotation();
-    } else{
-        this.rotation = rotation;
-    }
-
-    this.t_start = null;
-    this.experiment = null;
-    this.routine = null;
-    this.posx = pos[0] * width;
-    this.posy = pos[1] * height;
-    this.finished = null;
-
-    this.setExperiment = function(experiment){
-        this.experiment = experiment;
-    };
-
-    this.setRoutine = function(routine){
-        this.routine = routine;
-    };
-
-    this.draw = function(){
-        if ((millis() - this.t_start > timestart)){
-            if (timestop == null | (millis() - this.t_start) - timestop < 0 ){
-                push();
-                translate(this.img.width/2 + this.posx/2, this.img.height/2 + this.posy/2);
-                console.log(this.rotation);
-                rotate(radians(this.rotation));
-                imageMode(CENTER);
-                image(this.img, 0, 0);
-                pop();
-
-            }
-
-        }
-    };
-
-    this.update = function(){
-        if (typeof img === "function"){
-            this.img = img();
-        } else{
-            this.img = img;
-        }
-
-        if (typeof rotation === "function"){
-            this.rotation = rotation();
-        } else{
-            this.rotation = rotation;
-        }
-        if (timestop != null & (millis() - this.t_start) - timestop > 0 ){
-            this.finished = true;
-        }
-
-        return true;
-    };
-
-    this.start = function(t_start){
-        this.t_start = t_start;
-        this.finished = false;
-    };
-}

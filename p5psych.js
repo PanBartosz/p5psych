@@ -1,7 +1,10 @@
-function Experiment(){
+function Experiment(url){
     this.routines = [];
     this.currentRoutine = null;
     this.routineCounter = 0;
+    this.server_url = url;
+    this.data = [];
+    this.currentTrial = {};
 
     this.addRoutine = function(routine){
         this.routines.push(routine);
@@ -14,10 +17,15 @@ function Experiment(){
     };
 
     this.nextRoutine = function(){
+        if (this.routineCounter +1 == this.routines.length) {
+            noLoop();
+            this.sendData();
+        } else{
         this.routineCounter += 1;
         this.currentRoutine = this.routines[this.routineCounter];
         this.currentRoutine.setExperiment(this);
         this.currentRoutine.start();
+        }
     };
 
     this.update = function(){
@@ -28,8 +36,20 @@ function Experiment(){
     };
 
     this.addData = function(data){
-        // Tu jeszcze nic nie ma ale kiedyś na pewno będzie...
-        console.log(data);
+        var row = this.currentTrial;
+        for (var attr in data) {row[attr] = data[attr]; }
+        this.data.push(row);
+        console.log(row);
+    };
+
+    this.sendData = function(){
+        httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data}), function(result) {
+            noLoop();
+            background(255);
+            fill(0);
+            text('Uploading data...', width/2, height/2);
+            text(result, width/2, height/1.5);
+        });
     };
 }
 
@@ -41,7 +61,6 @@ function Loop(conditions, nrep = 1){
     for (var i = 0; i < this.nrep; i++){
         this.conditions = this.conditions.concat(conditions);
     }
-    console.log(this.conditions);
     this.routines = [];
     this.currentTrial = conditions[0];
     this.experiment = null;
@@ -77,18 +96,18 @@ function Loop(conditions, nrep = 1){
         } else {
             this.routineCounter += 1;
         }
-        console.log(this.trialCounter);
         this.currentTrial = this.conditions[this.trialCounter];
         this.currentRoutine = this.routines[this.routineCounter];
         this.currentRoutine.setExperiment(this.experiment);
+        this.experiment.currentTrial = this.currentTrial;
         this.currentRoutine.start();
-        console.log(this.currentTrial);
     };
 
     this.start = function(){
         this.currentRoutine = this.routines[this.routineCounter];
         this.currentRoutine.setExperiment(this.experiment);
         this.currentTrial = this.conditions[this.trialCounter];
+        this.experiment.currentTrial = this.currentTrial;
         this.currentRoutine.start();
 
     };
@@ -240,7 +259,7 @@ function KeyboardResponse(keys = [ENTER]){
         }
         if (keyIsPressed & this.keys.indexOf(keyCode) > -1 & !this.lock){
             this.lock = true;
-            this.experiment.addData(['resp', millis() - this.t_start, keyCode]);
+            this.experiment.addData({'rt': millis() - this.t_start, 'resp' : keyCode});
             return false;
         } else {
             return true;
@@ -282,7 +301,6 @@ function ImageStimulus(img, rotation = 0, pos = [0.5,0.5], timestart = 0, timest
             if (timestop == null | (millis() - this.t_start) - timestop < 0 ){
                 push();
                 translate(this.img.width/2 + this.posx/2, this.img.height/2 + this.posy/2);
-                console.log(this.rotation);
                 rotate(radians(this.rotation));
                 imageMode(CENTER);
                 image(this.img, 0, 0);

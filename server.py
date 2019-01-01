@@ -1,0 +1,19 @@
+from flask import Flask, request, send_from_directory
+import pandas as pd
+import simplejson
+
+app = Flask(__name__)
+
+@app.route('/saveData', methods = ['GET', 'POST'])
+def saveData():
+    if request.method == 'POST':
+        data = simplejson.loads(request.data)
+        print(data)
+        data_df = pd.DataFrame(data['body'])
+        data_df.to_excel('test.xlsx')
+
+    return 'Success!'
+
+@app.route('/examples/<path:path>')
+def serve_file(path):
+    return send_from_directory('.', path)
