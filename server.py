@@ -1,11 +1,17 @@
 from flask import Flask, request, send_from_directory, render_template
 from flask_bootstrap import Bootstrap
+import os.path
+from flask_autoindex import AutoIndex
+
 import pandas as pd
 import simplejson
 from pprint import pprint as print
 
+
 app = Flask(__name__)
 Bootstrap(app)
+AutoIndex(app, browse_root=os.path.curdir)
+
 
 @app.route('/saveData', methods = ['GET', 'POST'])
 def saveData():
@@ -13,7 +19,7 @@ def saveData():
         data = simplejson.loads(request.data)
         print(data)
         data_df = pd.DataFrame(data['body'])
-        data_df.to_excel(data['date'] + '.xlsx')
+        data_df.to_excel('results/' + data['date'] + '.xlsx')
 
     return 'Success!'
 

@@ -52,6 +52,7 @@ function setup() {
     exp.addRoutine(trials);
     exp.addRoutine(thanks);
     exp.start();
+    console.log(window.location);
 }
 
 function draw() {
