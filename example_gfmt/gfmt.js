@@ -51,7 +51,13 @@ function setup() {
                                           timestop : 2000}));
 
 
-    exp = new Experiment('http://localhost:5000/saveData');
+    if (window.location['host'] == 'kognilab.pl'){
+        var url = 'http://kognilab.pl/p5psych/saveData';
+    } else {
+        var url = 'http://localhost:5000/saveData';
+    }
+
+    exp = new Experiment(url);
 
     exp.addRoutine(instr);
     exp.addRoutine(trials);

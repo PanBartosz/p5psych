@@ -73,7 +73,13 @@ function setup() {
     thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Thank you for your paricipation', timestop: 2000}));
 
 
-    exp = new Experiment('http://localhost:5000/saveData');
+    if (window.location['host'] == 'kognilab.pl'){
+        var url = 'http://kognilab.pl/p5psych/saveData';
+    } else {
+        var url = 'http://localhost:5000/saveData';
+    }
+
+    exp = new Experiment(url);
 
 
     var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['participant', 'sex (M/F)', 'age', 'gender']});
