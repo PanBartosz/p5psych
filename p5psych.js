@@ -1,3 +1,14 @@
+// Loading conditions from CSV file:
+function LoadP5TableData(trials_data){
+    var cond_obj = trials_data.getObject();
+    var conditions = [];
+    for (var val in cond_obj){
+        var c = cond_obj[val];
+        if (c != null){conditions.push(c);}
+    }
+    return conditions;
+}
+
 // Logic of the experiment
 function Experiment(url = null){
     this.routines = [];
@@ -43,7 +54,7 @@ Experiment.prototype.addData = function(data){
 };
 Experiment.prototype.sendData = function(){
     var date = [year(), month(), day(), hour(), minute(), second()].join('-');
-    if (url != null) {
+    if (this.server_url != null) {
         httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data, 'date' : date}), function(result) {
             noLoop();
             background(255);
@@ -75,17 +86,20 @@ Routine.prototype.start = function(){
 };
 Routine.prototype.update = function(){
     background(color(this.background));
-    finished = [];
+    var finished = [];
     for (var i = 0; i< this.components.length; i++){
         continueRoutine = this.components[i].update(this.t_start);
         this.components[i].draw();
         finished.push(this.components[i].finished);
-        if (continueRoutine == false){
-            return true;
-        };
-        if (finished.every(x => x == true)){
-            return true;
-        }
+    }
+
+    if (continueRoutine == false){
+        return true;
+    }
+
+    if (finished.every(x => x == true)){
+        console.log(finished);
+        return true;
     }
 };
 
@@ -135,7 +149,7 @@ Loop.prototype.start = function(){
     
 };
 Loop.prototype.update = function(){
-    next = this.currentRoutine.update();
+    var next = this.currentRoutine.update();
     if (next){
         return this.nextRoutine();
     }
@@ -250,6 +264,7 @@ function CodeComponent({name}){
     BaseComponent(this, {name});
     this.every_frame = [];
     this.at_the_start = [];
+    this.finished = true;
 }
 CodeComponent.prototype = Object.create(BaseComponent.prototype);
 CodeComponent.prototype.start = function(t_start){
@@ -375,7 +390,7 @@ RectComponent.prototype.draw = function(){
     var that = this;
     this.drawDecorator(function(){
         fill(that.fill_color);
-        rect(that.width*width, that.height * height, that.pos[0] * width, that.pos[1] * height);
+        rect(that.pos[0] * width, that.pos[1] * height, that.width*width, that.height * height,);
     });
 };
 
@@ -389,7 +404,7 @@ function KeyboardResponse({name,
                            force_end_of_routine = true} = {}){
     P5Component.call(this, {name});
     this.keys = keys;
-    this.lock = false;
+    this.lock = true;
     this.response = null;
     this.force_end_of_routine = force_end_of_routine;
 }
