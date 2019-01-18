@@ -1,0 +1,68 @@
+{% extends "bootstrap/base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<div class="container">
+    <h1>Examples</h1>
+    <ul>
+        <li>
+            <h2>
+            <a href="{{ url_for('serve_file', path='example_stroop/stroop.html' ) }}"> Implementation of simple Stroop task </a>
+            </h2>
+            <strong>Description:</strong>
+            <ul>
+                <li>basic structure</li>
+                <li>illustration of TextStimulus and KeyboardResponse classes</li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>
+            <a href="{{ url_for('serve_file', path='example_gfmt/gfmt.html' ) }}"> Implementation of simple Glasgow Face MAtching Task </a>
+            </h2>
+            <strong>Description:</strong>
+            <ul>
+                <li>basic structure</li>
+                <li>illustration of ImageStimulus class (and manipulation of image roration at the runtime)</li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>
+            <a href="{{ url_for('serve_file', path='example_visual_search/visual_search.html' ) }}"> Implementation of simple visual search task </a>
+            </h2>
+            <strong>Description:</strong>
+            <ul>
+                <li>basic structure</li>
+                <li>illustration of MouseResponse, PolygonStimulus and RectStimulus classes</li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>
+            <a href="{{ url_for('serve_file', path='example_self_paced_reading/selfpacedreading.html' ) }}"> Implementation of simple self-paced reading task </a>
+            </h2>
+            <strong>Description:</strong>
+            <ul>
+                <li>illustration of more advanced techniques consisting in injecting custom JS code (CodeComponent) for manipulating stimuli at the runtime</li>
+                <li>illustration of ExpInfo class (used to collect basic data about participants) and SliderResponse class</li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>
+            <a href="{{ url_for('serve_file', path='example_centering/centering.html' ) }}">(IN POLISH) Proste zadanie do badania dot. centeringu (z animacjami)</a>
+            </h2>
+
+            <strong>Opis</strong>
+            <ul>
+                <li>ilustracja klasy ExpInfo oraz manipulacji badaniem w czasie jego trwania (animacja o losowej długości)</li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
+
+{% endblock %}

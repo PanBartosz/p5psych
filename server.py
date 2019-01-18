@@ -1,9 +1,11 @@
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_from_directory, render_template
+from flask_bootstrap import Bootstrap
 import pandas as pd
 import simplejson
 from pprint import pprint as print
 
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route('/saveData', methods = ['GET', 'POST'])
 def saveData():
@@ -18,3 +20,7 @@ def saveData():
 @app.route('/examples/<path:path>')
 def serve_file(path):
     return send_from_directory('.', path)
+
+@app.route('/examples', strict_slashes=False)
+def examples():
+    return(render_template('examples.html'))
