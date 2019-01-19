@@ -10,7 +10,7 @@ from pprint import pprint as print
 
 app = Flask(__name__)
 Bootstrap(app)
-AutoIndex(app, browse_root=os.path.curdir)
+AutoIndex(app, browse_root='/var/www/apps/p5psych')
 
 
 @app.route('/saveData', methods = ['GET', 'POST'])
