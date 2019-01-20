@@ -8,7 +8,7 @@ var instructions;
 var instructions_loop;
 
 function preload(){
-    trials_data = loadTable('trials.csv', 'csv', 'header');
+    trials_data = loadTable('wersja1.csv', 'csv', 'header');
     instructions_data = loadTable('instructions.csv', 'csv', 'header');
 }
 
@@ -45,11 +45,17 @@ function setup() {
     displaySentence2.addComponent(f2);
     displaySentence2.addComponent(response2);
 
+    var displayResponse = new Routine();
+    var resp_prompt = new TextStimulus({name: 'prompt', text : '?'});
+    var response_sensible = new KeyboardResponse({name: 'response_sensible', keys: [113, 119]});
+    displayResponse.addComponent(resp_prompt);
+    displayResponse.addComponent(response_sensible);
+
 
     var interStimuliBreak = new Routine();
 
 
-    var break_text = new TextStimulus({name : 'break_text', text: 'Zaraz rozpocznie się kolejna próba', timestop: 2000, pos: [0.5, 0.3]});
+    var break_text = new TextStimulus({name : 'break_text', text: 'Zaraz rozpocznie się kolejna próba', timestop: 2000, pos: [0.5, 0.5]});
     var sph = new CodeComponent({name: 'break_randomizer'});
     var progress_bar = new RectComponent({name : 'progress_bar',
                                       height: 0.05,
@@ -60,7 +66,7 @@ function setup() {
                                           timestop: 2000
                                          });
 
-    sph.at_the_start.push(function() {var timestop = random(500, 2000); progress_bar.timestop = timestop; break_text.timestop = timestop; });
+    sph.at_the_start.push(function() {var timestop = random(1000, 2000); progress_bar.timestop = timestop; break_text.timestop = timestop; });
 
     interStimuliBreak.addComponent(sph);
     interStimuliBreak.addComponent(break_text);
@@ -72,6 +78,7 @@ function setup() {
     trials.addRoutine(interStimuliBreak);
     trials.addRoutine(displaySentence1);
     trials.addRoutine(displaySentence2);
+    trials.addRoutine(displayResponse);
 
     var thanks = new Routine();
     thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Thank you for your paricipation', timestop: 2000}));
@@ -86,7 +93,7 @@ function setup() {
     exp = new Experiment(url);
 
 
-    var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['participant', 'sex (M/F)', 'age', 'gender']});
+    var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['uczestnik', 'płeć (K/M)', 'wiek', 'gender']});
 
     exp.addRoutine(exp_info_box);
     exp.addRoutine(instructions_loop);

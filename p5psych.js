@@ -300,8 +300,9 @@ TextStimulus.prototype.draw = function(){
     this.drawDecorator(function(){
         fill(color(that.color));
         textSize(that.textSize);
-        textAlign(CENTER);
-        text(that.text, that.pos[0] * width, that.pos[1] * height);
+        textAlign(CENTER, CENTER);
+        rectMode(CENTER);
+        text(that.text, that.pos[0] * width, that.pos[1] * height, 2/3*width, 2/3*height);
     });
 };
 TextStimulus.constructor = TextStimulus;
@@ -390,6 +391,7 @@ RectComponent.prototype.draw = function(){
     var that = this;
     this.drawDecorator(function(){
         fill(that.fill_color);
+        rectMode(CORNER);
         rect(that.pos[0] * width, that.pos[1] * height, that.width*width, that.height * height,);
     });
 };
