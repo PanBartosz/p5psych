@@ -3,20 +3,32 @@ var f1;
 var f2;
 var trials_data;
 var instructions_data;
+var intersession_instructions_data;
 var conditions;
+var training;
+var training_data;
 var instructions;
+var intersession_instructions;
 var instructions_loop;
+var intersession_instructions_loop;
 
 function preload(){
     trials_data = loadTable('wersja1.csv', 'csv', 'header');
     instructions_data = loadTable('instructions.csv', 'csv', 'header');
+    intersession_instructions_data = loadTable('intersession_instructions.csv', 'csv', 'header');
+    training_data = loadTable('training.csv', 'csv', 'header');
 }
 
 function setup() {
+    // Loading data from CSV files
     conditions = LoadP5TableData(trials_data);
     instructions = LoadP5TableData(instructions_data);
+    intersession_instructions = LoadP5TableData(intersession_instructions_data);
+    training = LoadP5TableData(training_data);
 
     createCanvas(windowWidth, windowHeight);
+
+    // Instructions
     var instructions_loop = new Loop(instructions, 1);
     var instr = new Routine();
     instr.addComponent(new TextStimulus({name: 'instruction',
@@ -27,7 +39,94 @@ function setup() {
     instr.addComponent(new KeyboardResponse({ name : 'instr_resp'}));
 
 
-    var trials = new Loop(conditions, 2);
+    // Training session
+    var training_loop = new Loop(training, 99);
+
+    var interStimuliBreak_train = new Routine();
+
+
+    var break_text_train = new TextStimulus({name : 'break_text', text: 'Zaraz rozpocznie się kolejna próba', timestop: 2000, pos: [0.5, 0.5]});
+    var sph_train = new CodeComponent({name: 'break_randomizer'});
+    var progress_bar_train = new RectComponent({name : 'progress_bar',
+                                      height: 0.05,
+                                      width: function() {
+                                          return 0.5 - (0.5 * (millis() - break_text_train.t_start)/break_text_train.timestop);},
+                                          pos: [0.2, 0.8],
+                                          fill_color : [255,0,0],
+                                          timestop: 2000
+                                         });
+
+    sph_train.at_the_start.push(function() {var timestop = random(1000, 2000); progress_bar_train.timestop = timestop; break_text_train.timestop = timestop; });
+
+    interStimuliBreak_train.addComponent(sph_train);
+    interStimuliBreak_train.addComponent(break_text_train);
+    interStimuliBreak_train.addComponent(progress_bar_train);
+
+    var displaySentence1_train = new Routine();
+    var displaySentence2_train = new Routine();
+    var displayResponse_train = new Routine();
+    var feedback_train = new Routine();
+    var f1_train = new TextStimulus({name : 'f1train', text: function() {return training_loop.currentTrial['F1'];}});
+    var f2_train = new TextStimulus({name : 'f2train', text: function() {return training_loop.currentTrial['F2'];}});
+    var response1_train = new KeyboardResponse({name : 'sentence_response_training'});
+    var response2_train = new KeyboardResponse({name : 'sentence_response_training'});
+    var resp_prompt_train = new TextStimulus({name: 'prompt', text : '?'});
+    var response_sensible_train = new KeyboardResponse({name: 'response_sensible', keys: [113, 119]});
+
+    var tsb = new CodeComponent({name : 'training_session_breaker'});
+
+    tsb.p_counter = 0;
+    tsb.n_counter = 0;
+    tsb.at_the_start.push(function() {
+        tsb.p_counter = tsb.n_counter;
+        console.log(tsb.n_counter);
+        console.log(tsb.p_counter);
+        if (tsb.n_counter == 3) {tsb.experiment.nextRoutine();} });
+
+    var feedback_text = new TextStimulus({name : 'feedback_text', text: function() {
+        if (response_sensible_train.response == training_loop.currentTrial['corr']) {
+            tsb.n_counter = tsb.p_counter + 1;
+            console.log(tsb.n_counter);
+            return 'Twoja odpowiedź była prawidłowa.';
+        } else{
+            tsb.n_counter = 0;
+            return "Twoja odpowiedź była nieprawidłowa.";
+        }
+           }});
+
+
+    var response3_train = new KeyboardResponse({name : 'feedback_next_training'});
+
+    interStimuliBreak_train.addComponent(tsb);
+    displaySentence1_train.addComponent(f1_train);
+    displaySentence1_train.addComponent(response1_train);
+
+    displaySentence2_train.addComponent(f2_train);
+    displaySentence2_train.addComponent(response2_train);
+
+    displayResponse_train.addComponent(resp_prompt_train);
+    displayResponse_train.addComponent(response_sensible_train);
+
+    feedback_train.addComponent(feedback_text);
+    feedback_train.addComponent(response3_train);
+
+
+    // Inter-session instruction
+    var intersession_instructions_loop = new Loop(intersession_instructions, 1);
+    var inter_instr = new Routine();
+    inter_instr.addComponent(new TextStimulus({name: 'intersession_instruction',
+                                         text: function() {return intersession_instructions_loop.currentTrial['instructions'];},
+                                         pos: [0.5, 0.5]
+                                        }
+                                       ));
+    inter_instr.addComponent(new KeyboardResponse({ name : 'iinstr_resp'}));
+
+
+
+
+
+    // Main session
+    var trials = new Loop(conditions, 1);
 
     var displaySentence1 = new Routine();
 
@@ -75,10 +174,19 @@ function setup() {
 
     instructions_loop.addRoutine(instr);
 
+    training_loop.addRoutine(interStimuliBreak_train);
+    training_loop.addRoutine(displaySentence1_train);
+    training_loop.addRoutine(displaySentence2_train);
+    training_loop.addRoutine(displayResponse_train);
+    training_loop.addRoutine(feedback_train);
+
+    intersession_instructions_loop.addRoutine(inter_instr);
+
     trials.addRoutine(interStimuliBreak);
     trials.addRoutine(displaySentence1);
     trials.addRoutine(displaySentence2);
     trials.addRoutine(displayResponse);
+
 
     var thanks = new Routine();
     thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Thank you for your paricipation', timestop: 2000}));
@@ -97,6 +205,8 @@ function setup() {
 
     exp.addRoutine(exp_info_box);
     exp.addRoutine(instructions_loop);
+    exp.addRoutine(training_loop);
+    exp.addRoutine(intersession_instructions_loop);
     exp.addRoutine(trials);
     exp.addRoutine(thanks);
     exp.start();
