@@ -71,6 +71,7 @@ function setup() {
     var response1_train = new KeyboardResponse({name : 'sentence_response_training'});
     var response2_train = new KeyboardResponse({name : 'sentence_response_training'});
     var resp_prompt_train = new TextStimulus({name: 'prompt', text : '?'});
+    var resp_tip_train = new TextStimulus({name : 'tip', text : 'Q = nonsensowna, W = sensowna', pos : [0.5, 0.8]});
     var response_sensible_train = new KeyboardResponse({name: 'response_sensible', keys: [113, 119]});
 
     var tsb = new CodeComponent({name : 'training_session_breaker'});
@@ -81,7 +82,7 @@ function setup() {
         tsb.p_counter = tsb.n_counter;
         console.log(tsb.n_counter);
         console.log(tsb.p_counter);
-        if (tsb.n_counter == 3) {tsb.experiment.nextRoutine();} });
+        if (tsb.n_counter == 6) {tsb.experiment.nextRoutine();} });
 
     var feedback_text = new TextStimulus({name : 'feedback_text', text: function() {
         if (response_sensible_train.response == training_loop.currentTrial['corr']) {
@@ -105,6 +106,7 @@ function setup() {
     displaySentence2_train.addComponent(response2_train);
 
     displayResponse_train.addComponent(resp_prompt_train);
+    displayResponse_train.addComponent(resp_tip_train);
     displayResponse_train.addComponent(response_sensible_train);
 
     feedback_train.addComponent(feedback_text);
