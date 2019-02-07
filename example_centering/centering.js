@@ -148,8 +148,11 @@ function setup() {
 
     var displayResponse = new Routine();
     var resp_prompt = new TextStimulus({name: 'prompt', text : '?'});
+    var resp_tip= new TextStimulus({name : 'tip', text : 'Q = nonsensowna, W = sensowna', pos : [0.5, 0.8]});
     var response_sensible = new KeyboardResponse({name: 'response_sensible', keys: [113, 119]});
+
     displayResponse.addComponent(resp_prompt);
+    displayResponse.addComponent(resp_tip);
     displayResponse.addComponent(response_sensible);
 
 
@@ -191,7 +194,7 @@ function setup() {
 
 
     var thanks = new Routine();
-    thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Thank you for your paricipation', timestop: 2000}));
+    thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Dziękujemy za udział w badaniu! Zespół KogniLab UW', timestop: 2000}));
 
 
     if (window.location['host'] == 'kognilab.pl'){
