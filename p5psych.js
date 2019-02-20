@@ -10,7 +10,7 @@ function LoadP5TableData(trials_data){
 }
 
 // Logic of the experiment
-function Experiment(url = null){
+function Experiment(url = null, expname = ''){
     this.routines = [];
     this.currentRoutine = null;
     this.routineCounter = 0;
@@ -18,6 +18,7 @@ function Experiment(url = null){
     this.data = [];
     this.currentTrial = {};
     this.expInfo = {};
+    this.expname = expname;
 }
 Experiment.prototype.addRoutine = function(routine){
     this.routines.push(routine);
@@ -55,7 +56,7 @@ Experiment.prototype.addData = function(data){
 Experiment.prototype.sendData = function(){
     var date = [year(), month(), day(), hour(), minute(), second()].join('-');
     if (this.server_url != null) {
-        httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data, 'date' : date}), function(result) {
+        httpPost(this.server_url, 'text', JSON.stringify({'title' : 'data', 'body' : this.data, 'date' : date, 'expname' : this.expname}), function(result) {
             noLoop();
             background(255);
             fill(0);

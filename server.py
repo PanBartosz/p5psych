@@ -18,8 +18,9 @@ def saveData():
     if request.method == 'POST':
         data = simplejson.loads(request.data)
         print(data)
+        prefix = data['expname']
         data_df = pd.DataFrame(data['body'])
-        data_df.to_excel('results/' + data['date'] + '.xlsx')
+        data_df.to_excel('results/' + prefix + '_' + data['date'] + '.xlsx')
 
     return 'Success!'
 
