@@ -38,7 +38,7 @@ def examples():
 @app.route('/cb/<exp>/<nmax>')
 def return_cb(exp, nmax):
     completed = glob('results/{exp}*.xlsx'.format(exp = exp))
-    counter = defaultdict(int)
+    counter = {str(i) : 0 for i in range(1,int(nmax+1))}
     for result in completed:
         v = result.split('_')[1]
         counter[v] += 1
