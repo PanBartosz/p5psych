@@ -12,29 +12,39 @@ var intersession_instructions;
 var instructions_loop;
 var intersession_instructions_loop;
 var version;
+var rv;
+var loaded = false;
 
-function preload(){
+
+function setup() {
     if (window.location['host'] == 'kognilab.pl'){
         var url = 'http://kognilab.pl/p5psych/cb/centering/6';
     } else {
         var url = 'http://localhost:5000/cb/centering/6';
     }
-    httpGet(url, function(response){version = response});
-    trials_data = loadTable('wersja1.csv', 'csv', 'header');
-    instructions_data = loadTable('instructions.csv', 'csv', 'header');
-    intersession_instructions_data = loadTable('intersession_instructions.csv', 'csv', 'header');
-    training_data = loadTable('training.csv', 'csv', 'header');
+
+    httpGet(url, function(response){version = response;})
+        .then(function() {
+            trials_data =  loadTable('wersja' + version + '.csv', 'csv', 'header',
+                                     function() {
+                                         conditions = LoadP5TableData(trials_data);
+                                         instructions_data = loadTable('instructions.csv', 'csv', 'header',
+                                                                       function(){
+                                                                           instructions = LoadP5TableData(instructions_data);
+                                                                           intersession_instructions_data = loadTable('intersession_instructions.csv', 'csv', 'header',
+                                                                                                                      function(){
+                                                                                                                          intersession_instructions = LoadP5TableData(intersession_instructions_data);
+                                                                                                                          training_data = loadTable('training.csv', 'csv', 'header', function() {
+                                                                                                                              training = LoadP5TableData(training_data);
+                                                                                                                              setupExp();});   });
+                                                                       });
+                                     });});
+
 }
 
-function setup() {
-    // Loading data from CSV files
-    conditions = LoadP5TableData(trials_data);
-    instructions = LoadP5TableData(instructions_data);
-    intersession_instructions = LoadP5TableData(intersession_instructions_data);
-    training = LoadP5TableData(training_data);
-
+function setupExp(){
+    console.log(version);
     createCanvas(windowWidth, windowHeight);
-
     // Instructions
     var instructions_loop = new Loop(instructions, 1);
     var instr = new Routine();
@@ -222,8 +232,12 @@ function setup() {
     exp.addRoutine(trials);
     exp.addRoutine(thanks);
     exp.start();
+
+    loaded = true;
 }
 
 function draw() {
+    if (loaded){
     exp.update();
+    }
 }
