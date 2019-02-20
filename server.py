@@ -44,7 +44,7 @@ def return_cb(exp, nmax):
         counter[v] += 1
     c_sorted = sorted(counter, key = counter.get)
     try:
-        return str(c_sorted[-1])
+        return str(c_sorted[0])
     except Exception as e:
         print(e)
         return str(randint(1, int(nmax)))
