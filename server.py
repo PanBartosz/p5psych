@@ -5,6 +5,7 @@ from flask_autoindex import AutoIndex
 from glob import glob
 from collections import defaultdict
 from random import randint
+from random import shuffle
 
 import pandas as pd
 import simplejson
@@ -38,15 +39,24 @@ def examples():
 @app.route('/cb/<exp>/<nmax>')
 def return_cb(exp, nmax):
     completed = glob('results/{exp}*.xlsx'.format(exp = exp))
-    counter = {str(i) : 0 for i in range(1,int(nmax+1))}
+    counter = {str(i) : 0 for i in range(1,int(nmax)+1)}
     for result in completed:
         v = result.split('_')[1]
         counter[v] += 1
-    c_sorted = sorted(counter, key = counter.get)
-    print(c_sorted)
+    inv_counter = defaultdict(list)
+    for k, v in counter.items():
+        inv_counter[v].append(k)
+
+    minval = inv_counter[min(inv_counter.keys())]
+    shuffle(minval)
     print(counter)
+    print(inv_counter)
+    print(minval)
+
+
+
     try:
-        return str(c_sorted[0])
+        return str(minval[0])
     except Exception as e:
         print(e)
         return str(randint(1, int(nmax)))
