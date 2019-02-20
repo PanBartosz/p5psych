@@ -43,6 +43,8 @@ def return_cb(exp, nmax):
         v = result.split('_')[1]
         counter[v] += 1
     c_sorted = sorted(counter, key = counter.get)
+    print(c_sorted)
+    print(counter)
     try:
         return str(c_sorted[0])
     except Exception as e:
