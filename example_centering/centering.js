@@ -11,8 +11,15 @@ var instructions;
 var intersession_instructions;
 var instructions_loop;
 var intersession_instructions_loop;
+var version;
 
 function preload(){
+    if (window.location['host'] == 'kognilab.pl'){
+        var url = 'http://kognilab.pl/p5psych/cb/centering/6';
+    } else {
+        var url = 'http://localhost:5000/cb/centering/6';
+    }
+    httpGet(url, function(response){version = response});
     trials_data = loadTable('wersja1.csv', 'csv', 'header');
     instructions_data = loadTable('instructions.csv', 'csv', 'header');
     intersession_instructions_data = loadTable('intersession_instructions.csv', 'csv', 'header');
@@ -203,7 +210,7 @@ function setup() {
         var url = 'http://localhost:5000/saveData';
     }
 
-    exp = new Experiment(url);
+    exp = new Experiment(url, 'centering' + '_' + version);
 
 
     var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['uczestnik', 'płeć (K/M)', 'wiek', 'gender']});

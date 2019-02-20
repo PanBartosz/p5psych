@@ -2,6 +2,9 @@ from flask import Flask, request, send_from_directory, render_template
 from flask_bootstrap import Bootstrap
 import os.path
 from flask_autoindex import AutoIndex
+from glob import glob
+from collections import defaultdict
+from random import randint
 
 import pandas as pd
 import simplejson
@@ -31,3 +34,20 @@ def serve_file(path):
 @app.route('/examples', strict_slashes=False)
 def examples():
     return(render_template('examples.html'))
+
+@app.route('/cb/<exp>/<nmax>')
+def return_cb(exp, nmax):
+    completed = glob('results/{exp}*.xlsx'.format(exp = exp))
+    counter = defaultdict(int)
+    for result in completed:
+        v = result.split('_')[1]
+        counter[v] += 1
+    c_sorted = sorted(counter, key = counter.get)
+    try:
+        return str(c_sorted[-1])
+    except Exception as e:
+        print(e)
+        return str(randint(1, int(nmax)))
+
+
+

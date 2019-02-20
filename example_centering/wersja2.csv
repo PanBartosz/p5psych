@@ -1,0 +1,59 @@
+,F1,F2,centering,index,l1,l2sens,realization,set,target
+0,Mateusz zaraził się grypą od Adriana.,Żaden z nich nie był zaszczepiony.,filler29,,,,filler,sensible,filler29
+1,Hania zgubiła podczas wycieczki złote kolczyki Julii.,"Hania będzie musiała przyznać się mamie, że pożyczyła kolczyki od Julii.",centered,104.0,23.0,0.0,noun,18,target
+2,Prosiaczek był najlepszym przyjacielem Puchatka.,On lubił podjadać miodek Puchatka.,filler14,,,,pronoun,nonsensible,filler14
+3,Zrozpaczona Zosia przytuliła się do Maćka.,Zosia zawsze miała dobry humor przy Maćku.,filler20,,,,noun,nonsensible,filler20
+4,Marysia pozmywała naczynia za Sonię.,"Musi się nauczyć, żeby nie obciążać swoimi obowiązkami Marsi.",noncentered,99.0,17.0,15.0,null,17,target
+5,Katastrofa Dominiki bardzo dotknęła Wojtka..,Wojtek wlazł na łóżko Dominiki i zawinął się w prześcieradło.,filler9,,,,noun,nonsensible,filler9
+6,Wojtek przepisał od Andrzeja pracę domową.,Niestety nauczyciel przyłapał ich na oszustwie.,filler26,,,,filler,sensible,filler26
+7,Tomasz zaplanował wyjazd z Magdą.,"Jakby Tomek nie zjadł pączka, to Magda nie byłaby zła.",filler17,,,,noun,nonsensible,filler17
+8,Staś zawsze podziwiał Rafała.,Był dla niego czymś w rodzaju starszego brata.,filler23,,,,filler,sensible,filler23
+9,Dawid marzył o dorównaniu Paulinie.,"Gdy Dawid wchodził po schodach, Paulina patrzyła uważnie.",filler10,,,,noun,nonsensible,filler10
+10,Teresa wrzuciła do skrytki Marty banknot.,"Ona była zawsze umalowana, czego zazdrościła jej Marta.",filler5,,,,pronoun,nonsensible,filler5
+11,Krzysztof postanowił zrobić remont w mieszkaniu Dominiki.,"Gdyby nie Krzysztof, to Dominika poszłaby spać.",filler18,,,,noun,nonsensible,filler18
+12,Maja urodziła dziecko Rafałowi.,Oboje byli bardzo szczęśliwi.,filler35,,,,filler,sensible,filler35
+13,Ala wysłała Kasię do sklepu po zakupy.,Ala w tym czasie przygotowywała dla Kasi niespodziankę.,centered,74.0,19.0,0.0,noun,13,target
+14,Klemens gotował razem z Heleną obiad.,"Niestety, zagapili się i przypaliła się im zupa.",filler24,,,,filler,sensible,filler24
+15,Tomek znalazł w szatni zeszyt Kuby.,"On ucieszył się, bo już dawno temu miał go zwrócić Kubie.",centered,19.0,17.0,13.0,pronoun,4,target
+16,Klara wytrącała zawsze Jagodę z równowagi.,Klara nigdy nie spóźniała się na korepetycje u Jagody.,filler6,,,,noun,nonsensible,filler6
+17,Marcin nie lubi pracować z Hubertem.,"On nie lubi robić wszystkiego w pośpiechu, a Hubertowi to nie przeszkdza.",centered,91.0,23.0,14.0,pronoun,16,target
+18,Marcin starał się uspokoić Magdalenę.,"Dla Kuby w miarę postępów było coraz jaśniejsze, dlaczego to Magdalena.",filler8,,,,noun,nonsensible,filler8
+19,Irena odziedziczyła po Konradzie cały majątek.,Stała się z dnia na dzień obrzydliwie bogata.,filler30,,,,filler,sensible,filler30
+20,Bartek z wściekłością wyrzucił Maćka z pokoju.,"Maciek zawsze strasznie hałasował, gdy Bartek chciał się skoncentrować.",noncentered,53.0,19.0,0.0,noun,9,target
+21,Dla Radka najważniejsze było bezpieczeństwo Oli.,Dlatego wysłał ją na kurs samoobrony.,filler22,,,,filler,sensible,filler22
+22,Marzena często komplementowała Zosię.,"Marzena zawsze uważała, że Zosia ma dobry gust.",centered,8.0,16.0,0.0,noun,2,target
+23,Kacper zabrał na wycieczkę Sebastiana.,Sebastianowi podobało się ich wspólna wyprawa.,filler21,,,,filler,sensible,filler21
+24,Grzegorz naprawił ulubiony zegar Jana.,Jego firanki nigdy nie miały dla Jana znaczenia.,filler4,,,,pronoun,nonsensible,filler4
+25,Adrian zawsze liczył się ze zdaniem Gosi.,"Uważał, że ma ona fantastyczny gust.",filler34,,,,filler,sensible,filler34
+26,Michał zadzwonił wcześnie rano do Karola.,"Karol miał ważną sprawę, dlatego Michał oddzwonił, gdy tylko wstał.",noncentered,59.0,19.0,0.0,noun,10,target
+27,Paweł uczył Paulinę jeździć na łyżwach.,Dlatego poszli na lodowisko.,filler39,,,,filler,sensible,filler39
+28,Mikołaj co roku przynosił prezenty Tosi.,On bardzo lubił pleść Tosi warkocze.,filler11,,,,pronoun,nonsensible,filler11
+29,Olek znowu zdradził Franciszkę.,Nie mogła sobie z tym poradzić.,filler38,,,,filler,sensible,filler38
+30,Tymon chodził na korepetycje z Krystianem.,Jego mama robiła pyszne obiady dla Krystiana.,filler15,,,,pronoun,nonsensible,filler15
+31,Łukaszowi bardzo podobała się Natalia.,"Chciałby ją zaprosić na randkę, ale boi się odrzucenia.",filler27,,,,filler,sensible,filler27
+32,Tadeusz codziennie pisał wiersze dla Marii.,Dla niego najważniejsze było śpiewanie piosenek dla Marii.,filler13,,,,pronoun,nonsensible,filler13
+33,Werka pogłaskała Łatkę po głowie.,"Łatka zawsze przychodziła, gdy chciała, żeby Werka się nią zajęła.",noncentered,47.0,20.0,0.0,noun,8,target
+34,Kaczor Donald był ulubionym gościem Myszki Miki.,Uwielbiali oni spędzać ze sobą czas.,filler32,,,,filler,sensible,filler32
+35,Jan wygrał tym razem w szachy z Krzysztofem.,Był znacznie silniejszym graczem od Krzysztofa,centered,12.0,12.0,9.0,null,3,target
+36,Kasia straciła zaufanie do Janiny.,"Gdyby nie jej torebka to, to Janina miałaby więcej szczęścia.",filler2,,,,pronoun,nonsensible,filler2
+37,Grażyna przesłała e-mailem Klarze podziękowania.,"Nie wiedziała, co powinna odpowiedzieć Grażynie.",noncentered,27.0,15.0,,null,5,target
+38,Agnieszka pomagała w lekcjach Adamowi.,Gdyby nie Agnieszka Adam by chodził w porwanych skarpetkach.,filler16,,,,noun,nonsensible,filler16
+39,Staś pomógł myć samochód Adamowi.,"On wiedział, że Staś będzie chciał zapłatę.",noncentered,82.0,16.0,9.0,pronoun,14,target
+40,Gracjan jest największym fanem The Chainsmokers.,Chodził na wszystkie ich koncerty.,filler33,,,,filler,sensible,filler33
+41,Asia znalazła na strychu stary pamiętnik Ewy.,"Ona nie mogła zdobyć się na rozmowę z Asią, wiedząc, co o niej kiedyś napisała.",noncentered,64.0,26.0,13.0,pronoun,11,target
+42,Damian nie potrafił zaimponować Sylwii.,Jego zaloty w ogóle nie działały na Sylwię.,filler31,,,,filler,sensible,filler31
+43,Darek zobaczył Wojtka przy przejściu dla pieszych.,"Zamachał energicznie, by zwrócić uwagę Wojtka",centered,108.0,15.0,13.0,null,19,target
+44,Paula wiedziała na co może liczyć w przypadku Łucji.,Dla niej najważniejsza był ulubiony grzebień Łucji.,filler3,,,,pronoun,nonsensible,filler3
+45,Sylwia w gniewie zrzuciła Malwinę ze schodów.,"Doskonale wiedziała, dlaczego Sylwia to zrobiła.",noncentered,33.0,17.0,10.0,null,6,target
+46,Aniela znalazła pracę w firmie Bartka.,Zawsze lubili razem pracować.,filler36,,,,filler,sensible,filler36
+47,Rafał często znęcał się nad Grzesiem.,On przez całą drogę do domu przedrzeźniał Grzesia.,centered,67.0,14.0,9.0,pronoun,12,target
+48,Marek kopnął w nogę Ziemowita.,Największe dzieło Marka najbardziej się podobało Ziemowitowi.,filler7,,,,noun,nonsensible,filler7
+49,Staś próbował zrobić ulubiony tort Doroty.,"Najlepiej wychodziły mu hamburgery, których Dorota nie lubiła.",filler12,,,,pronoun,nonsensible,filler12
+50,Jacek szczerze przeprosił Piotra.,Był wczoraj bardzo niemiły dla Piotra.,centered,0.0,11.0,5.0,null,1,target
+51,Zosia nie potrafiła doradzić Lucynie.,Jej problem był bardzo skomplikowany.,filler25,,,,filler,sensible,filler25
+52,Szczepan poszedł na imprezę z Olą.,Według Szczepana najlepszą jajecznicę robiłą Ola.,filler19,,,,noun,nonsensible,filler19
+53,Ula pomogła sprzątnąć dom Mariuszowi.,Sam by sobie nie poradził z tym bałaganem.,filler40,,,,filler,sensible,filler40
+54,Jan nie był w stanie wysłać Tadkowi czeku.,"On był tak dumny, że Tadek mógł to zrobić.",filler1,,,,pronoun,nonsensible,filler1
+55,Lilka zaprzyjaźniła się z Marianką.,Lubiły się razem bawić lalkami.,filler37,,,,filler,sensible,filler37
+56,Marta kupiła Natalii wielki bukiet róż.,"Ona była zaskoczona, że choć się nie lubią, to Marta zdobyła się na taki gest.",noncentered,88.0,23.0,15.0,pronoun,15,target
+57,Zuzia była najlepszą przyjaciółką Justyny.,Wszystko robiły razem i były zawsze ze sobą zgodne.,filler28,,,,filler,sensible,filler28
