@@ -167,12 +167,15 @@ function setProperty(property){
 
 function ExpInfoBox({name,
                      pos,
-                    data} = {}){
+                     data,
+                     additional_info} = {}){
     BaseComponent.call(this, {name, pos});
     this.html_elements = [];
     this.data = data;
     this.clicked = false;
+    this.additional_info = additional_info;
 }
+
 ExpInfoBox.prototype = Object.create(BaseComponent.prototype);
 ExpInfoBox.prototype.start = function(){
     var y = height/2 - 1/2*50*this.data.length;
@@ -202,7 +205,7 @@ ExpInfoBox.prototype.update = function(){
         for (var i=0; i < this.data.length; i++){
             expInfo[this.data[i]] = this.html_elements[i].value();
         }
-        this.experiment.expInfo = expInfo;
+        this.experiment.expInfo = Object.assign(expInfo, this.additional_info);
         for (var j = 0; j < this.html_elements.length; j++){
             this.html_elements[j].remove();
         }

@@ -36,6 +36,7 @@ def serve_file(path):
 def examples():
     return(render_template('examples.html'))
 
+
 @app.route('/cb/<exp>/<nmax>')
 def return_cb(exp, nmax):
     completed = glob('results/{exp}*.xlsx'.format(exp = exp))
@@ -63,3 +64,6 @@ def return_cb(exp, nmax):
 
 
 
+@app.route('/badania/badanie_marzec', strict_slashes=False)
+def badanie1():
+    return(render_template('badanie1.html'))

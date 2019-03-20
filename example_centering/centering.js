@@ -18,9 +18,9 @@ var loaded = false;
 
 function setup() {
     if (window.location['host'] == 'kognilab.pl'){
-        var url = 'http://kognilab.pl/p5psych/cb/centering/6';
+        var url = 'http://kognilab.pl/p5psych/cb/centeringf/6';
     } else {
-        var url = 'http://localhost:5000/cb/centering/6';
+        var url = 'http://localhost:5000/cb/centeringf/6';
     }
 
     httpGet(url, function(response){version = response;})
@@ -88,8 +88,8 @@ function setupExp(){
     var response1_train = new KeyboardResponse({name : 'sentence_response_training'});
     var response2_train = new KeyboardResponse({name : 'sentence_response_training'});
     var resp_prompt_train = new TextStimulus({name: 'prompt', text : '?'});
-    var resp_tip_train = new TextStimulus({name : 'tip', text : 'Q = nonsensowna, W = sensowna', pos : [0.5, 0.8]});
-    var response_sensible_train = new KeyboardResponse({name: 'response_sensible', keys: [113, 119]});
+    var resp_tip_train = new TextStimulus({name : 'tip', text : 'Q = nonsensowna, E = sensowna', pos : [0.5, 0.8]});
+    var response_sensible_train = new KeyboardResponse({name: 'response_sensible', keys: [113, 101]});
 
     var tsb = new CodeComponent({name : 'training_session_breaker'});
 
@@ -165,8 +165,8 @@ function setupExp(){
 
     var displayResponse = new Routine();
     var resp_prompt = new TextStimulus({name: 'prompt', text : '?'});
-    var resp_tip= new TextStimulus({name : 'tip', text : 'Q = nonsensowna, W = sensowna', pos : [0.5, 0.8]});
-    var response_sensible = new KeyboardResponse({name: 'response_sensible', keys: [113, 119]});
+    var resp_tip= new TextStimulus({name : 'tip', text : 'Q = nonsensowna, E = sensowna', pos : [0.5, 0.8]});
+    var response_sensible = new KeyboardResponse({name: 'response_sensible', keys: [113, 101]});
 
     displayResponse.addComponent(resp_prompt);
     displayResponse.addComponent(resp_tip);
@@ -220,10 +220,10 @@ function setupExp(){
         var url = 'http://localhost:5000/saveData';
     }
 
-    exp = new Experiment(url, 'centering' + '_' + version);
+    exp = new Experiment(url, 'centeringf' + '_' + version);
 
 
-    var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['uczestnik', 'płeć (K/M)', 'wiek', 'gender']});
+    var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['płeć (K/M/inne)', 'wiek'], additional_info : {'uczestnik' : Math.random().toString(36).substring(7)}});
 
     exp.addRoutine(exp_info_box);
     exp.addRoutine(instructions_loop);
