@@ -14,7 +14,9 @@ from pprint import pprint as print
 
 app = Flask(__name__)
 Bootstrap(app)
-AutoIndex(app, browse_root='/var/www/apps/p5psych')
+base_url = '/var/www/apps/p5psych/'
+
+AutoIndex(app, browse_root='base_url')
 
 
 @app.route('/saveData', methods = ['GET', 'POST'])
@@ -24,7 +26,7 @@ def saveData():
         print(data)
         prefix = data['expname']
         data_df = pd.DataFrame(data['body'])
-        data_df.to_excel('results/' + prefix + '_' + data['date'] + '.xlsx')
+        data_df.to_excel(base_url + 'results/' + prefix + '_' + data['date'] + '.xlsx')
 
     return 'Success!'
 
