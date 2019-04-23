@@ -71,5 +71,5 @@ def badanie1():
     return(render_template('badanie1.html'))
 
 @app.route('/badania/badanie_kwiecien', strict_slashes=False)
-def badanie1():
+def badanie2():
     return(render_template('badanie2.html'))
