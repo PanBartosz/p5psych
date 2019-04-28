@@ -211,7 +211,7 @@ function setupExp(){
 
 
     var thanks = new Routine();
-    thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Dziękujemy za udział w badaniu! Zespół KogniLab UW', timestop: 2000}));
+    thanks.addComponent(new TextStimulus({name :'thankyou', text: 'Dziękujemy za udział w badaniu! Prosimy nie wyłączać przeglądarki, dopóki na ekranie nie pojawiła się odpowiedni komunikat. Zespół KogniLab UW', timestop: 2000}));
 
 
     if (window.location['host'] == 'kognilab.pl'){
