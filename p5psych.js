@@ -60,7 +60,7 @@ Experiment.prototype.sendData = function(){
             noLoop();
             background(255);
             fill(0);
-            text('Uploading data...', width/2, height/2);
+            text('Zapisywanie danych. Prosimy nie wyłączać przeglądarki.', width/3, height/3);
             text(result, width/2, height/1.5);
         });
     }

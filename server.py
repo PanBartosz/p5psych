@@ -28,7 +28,7 @@ def saveData():
         data_df = pd.DataFrame(data['body'])
         data_df.to_excel(base_url + 'results/' + prefix + '_' + data['date'] + '.xlsx')
 
-    return 'Success!'
+    return 'Sukces! Udało się zapisać dane. Możesz wyłączyć okeinko przeglądarki.'
 
 @app.route('/examples/<path:path>')
 def serve_file(path):
