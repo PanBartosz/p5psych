@@ -18,9 +18,9 @@ var loaded = false;
 
 function setup() {
     if (window.location['host'] == 'kognilab.pl'){
-        var url = 'http://kognilab.pl/p5psych/cb/centeringi/6';
+        var url = 'http://kognilab.pl/p5psych/cb/centerings/6';
     } else {
-        var url = 'http://localhost:5000/cb/centeringi/6';
+        var url = 'http://localhost:5000/cb/centerings/6';
     }
 
     httpGet(url, function(response){version = response;})
@@ -220,7 +220,7 @@ function setupExp(){
         var url = 'http://localhost:5000/saveData';
     }
 
-    exp = new Experiment(url, 'centeringi' + '_' + version);
+    exp = new Experiment(url, 'centerings' + '_' + version);
 
 
     var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['płeć (K/M/inne)', 'wiek'], additional_info : {'uczestnik' : Math.random().toString(36).substring(7)}});
