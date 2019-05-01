@@ -1,0 +1,45 @@
+{% extends "bootstrap/base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<div class="container">
+    <h2>Zaproszenie do udziału w badaniu</h2>
+    <p>
+        <strong>Szanowni Państwo!</strong>
+    </p>
+    <p>
+        Zapraszamy Państwa do udziału w badaniu poświęconym interpretacji zdań w języku polskim.
+    </p>
+    <p>
+        Badanie trwa około <strong>10-15 minut</strong>. Aby wziąć w nim udział, trzeba skorzystać z <strong>komputera stacjonarnego lub laptopa</strong>. Niestety z przyczyn technicznych <strong>nie jest możliwy udział w badaniu przy użyciu smartfona ani tabletu</strong>. Państwa udział jest anonimowy, nie zbieramy żadnych identyfikujących Państwa danych. Wyniki będą rozpatrywane wyłącznie grupowo. W każdym momencie mogą Państwo zrezygnować z udziału w badaniu i przerwać eksperyment. W takiej sytuacji Państwa dane nie zostaną zapisane.
+    </p>
+
+    <p>
+        Po rozpoczęciu badania nie można go przerwać  bez utraty danych, prosimy również o wypełnienie go w trakcie jednej sesji. Udział w badaniu wymaga zarezerwowania około 15 minut, w czasie których będą Państwo mogli się skoncentrować na zadaniu eksperymentalnym.
+    </p>
+
+    <p>
+        Po kliknięciu na link poniżej rozpocznie się badanie. Sugerujemy wypełnianie go, korzystając z przeglądarki Google Chrome, Mozilla Firefox lub podobnej. Do wzięcia udziału niezbędna jest też włączona obsługa Javascriptu. Po kliknięciu w link na ekranie wyświetli się krótki kwestionariusz, w którym należy wpisać kilka informacji o sobie (wiek i płeć), a następnie kliknąć na przycisk "Start". Potem zostaną Państwu wyświetlone szczegółowe instrukcje. Zanim po skończeniu odpowiadania na pytania zamkną Państwo kartę przeglądarki z badaniem, prosimy zaczekać na informację, że Państwa odpowiedzi się zapisały.
+    </p>
+
+    <p>
+        Kliknięcie na ten link równoważne jest z wyrażeniem zgody na udział w badaniu. 
+    </p>
+	<p>
+        Gdyby chcieli się Państwo z nami skontaktować lub gdyby mieli Państwo do nas jakieś pytania na temat badania, prosimy pisać na adres: kognilab@uw.edu.pl
+
+	</p>
+	<p>
+        Katarzyna Kuś </br>
+        Laboratorium KogniLab
+    </p>
+
+            <h3>
+            <a href="{{ url_for('serve_file', path='example_centering_subord/centering.html' ) }}">Kliknij tutaj, aby rozpocząć badanie</a>
+            </h3>
+
+</div>
+
+
+{% endblock %}
