@@ -176,7 +176,7 @@ function setupExp(){
     var interStimuliBreak = new Routine();
 
 
-    var break_text = new TextStimulus({name : 'break_text', text: 'Zaraz rozpocznie się kolejna próba', timestop: 2000, pos: [0.5, 0.5]});
+    var break_text = new TextStimulus({name : 'break_text', text: 'Zaraz rozpocznie się kolejna próba.', timestop: 2000, pos: [0.5, 0.5]});
     var sph = new CodeComponent({name: 'break_randomizer'});
     var progress_bar = new RectComponent({name : 'progress_bar',
                                       height: 0.05,

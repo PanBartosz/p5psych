@@ -28,7 +28,7 @@ def saveData():
         data_df = pd.DataFrame(data['body'])
         data_df.to_excel(base_url + 'results/' + prefix + '_' + data['date'] + '.xlsx')
 
-    return 'Sukces! Udało się zapisać dane. Możesz wyłączyć okeinko przeglądarki.'
+    return 'Sukces! Udało się zapisać dane. Możesz wyłączyć okienko przeglądarki.'
 
 @app.route('/examples/<path:path>')
 def serve_file(path):
@@ -74,6 +74,6 @@ def badanie1():
 def badanie2():
     return(render_template('badanie2.html'))
 
-@app.route('/badania/badanie_kwiecien2', strict_slashes=False)
+@app.route('/badania/badanie_maj', strict_slashes=False)
 def badanie3():
     return(render_template('badanie3.html'))
