@@ -48,7 +48,7 @@ function setupExp(){
     var instructions_loop = new Loop(instructions, 1);
     var instr = new Routine();
     instr.addComponent(new TextStimulus({name: 'instruction',
-                                         text: function() {return instructions_loop.currentTrial['instructions'];},
+                                         text: function() {return String(instructions_loop.currentTrial['instructions']);}, // String test
                                          pos: [0.5, 0.5]
                                         }
                                        ));
