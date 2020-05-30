@@ -1,161 +1,161 @@
 ,Numer,Zdanie,"Sugeruje, że",Rodzaj,Typ
-0,277NXF,"""Odkąd zmienił się właściciel firmy, zyski znacznie wzrosły.""",nowy właściciel przeżył dwa groźne wypadki samochodowe.,N,filler
-1,086MXK,"""Wiktoria myśli, że jeśli Antoni ugotuje dla żony danie z pomidorami, to ona poczuje ich smak.""",Wiktoria zasługuje na pochwałę.,C,target
-2,217LXF,"""Ojciec Łucji zginął w wypadku samochodowym.""",ojciec Łucji nie żyje.,L,filler
-3,201LXF,"""Kazik zrozumiał, w którym miejscu popełnił błąd.""",Kazik popełnił błąd.,L,filler
-4,276NXF,"""Adrian wie, że powinien odejść z pracy.""",szefowa Adriana jest zaangażowana w działalność przestępczą.,N,filler
-5,048MXZ,"""Weronika myśli, że tramwaj przyjechał o dziewiątej czterdzieści jeden.""",Weronika zasługuje na naganę.,Z,target
-6,219LXF,"""Danuta jest weganką.""",Danuta nie spożywa produktów pochodzenia zwierzęcego.,L,filler
-7,255PXF,"""Wieczorem Daria ułożyła dziecko do snu.""",Daria ułożyła do snu swoje dziecko.,P R,filler
-8,252PXF,"""Tomasz wróci do domu w środę.""",Tomasz wróci w najbliższą środę.,P R,filler
-9,012WXO,"""Oskar wie, że u kotów gen odpowiadający za ubarwienie futra znajduje się na chromosomie X.""",Oskar zasługuje na naganę.,O,target
-10,239PXF,"""Zbyszek rozwiódł się i wyjechał z miasta.""",rozwód Zbyszka poprzedził jego wyjazd.,P sekwencja,filler
-11,240PXF,"""Zagrzmiało i spadł ulewny deszcz.""",grzmot poprzedził ulewę.,P sekwencja,filler
-12,273NXF,"""Piorun trafił w najwyższą wieżę zamku.""",w pożarze zginęło dwoje dzieci.,N,filler
+0,229PXF,"""Troje studentów nie zdało egzaminu.""",wszyscy pozostali studenci zdali.,P skalarne,filler
+1,007WXO,"""Kinga wie, że kora większości gatunków brzozy jest biała.""",Kinga zasługuje na naganę.,O,target
+2,155MXK,"""Jacek myśli, że niezadbanie o stan urządzeń na placu zabaw zagrozi bezpieczeństwu dzieci.""",Jacek zasługuje na naganę.,W,target
+3,015MXO,"""Ilona myśli, że oko strusia jest większe od jego mózgu.""",Ilona zasługuje na pochwałę.,O,target
+4,260PXF,"""Olek położył się spać.""",Olek położył się do łóżka.,P R,filler
+5,054WXZ,"""Rupert wie, że Ludwice przyśniło się, że rozmawiała z siostrą o pogodzie.""",Rupert zasługuje na pochwałę.,Z,target
+6,119WXK,"""Turysta wie, że wybranie przez Janinę żółtego szlaku sprawi, że ona i jej córka będą szły przez dwie i pół godziny.""",turysta zasługuje na naganę.,C,target
+7,058WXZ,"""Franciszka wie, że temperatura w Łodzi utrzymała się na podobnym poziomie przez cały tydzień.""",Franciszka zasługuje na pochwałę.,Z,target
+8,273NXF,"""Piorun trafił w najwyższą wieżę zamku.""",w pożarze zginęło dwoje dzieci.,N,filler
+9,057MXZ,"""Adam myśli, że książka, upadając, otworzyła się na sto dwudziestej czwartej stronie.""",Adam zasługuje na naganę.,Z,target
+10,108MXK,"""Igor myśli, że jeśli Klaudia napisze wiadomość do męża, to on ją przeczyta.""",Igor zasługuje na pochwałę.,C,target
+11,095WXK,"""Tina wie, że prośba Sylwii spowoduje, że jej syn położy książkę na stole.""",Tina zasługuje na naganę.,C,target
+12,268NXF,"""Juliusz wziął udział w loterii.""",Juliusz wygra główną nagrodę.,N,filler
 13,041WXZ,"""Władek wie, że temperatura w Zielonej Górze wyniosła dziś siedemnaście stopni.""",Władek zasługuje na pochwałę.,Z,target
-14,084MXK,"""Maciek myśli, że jeżeli odsłoni żaluzje, to jego siostra spojrzy za okno.""",Maciek zasługuje na naganę.,W,target
-15,085WXK,"""Alicja wie, że włączenie radia sprawi, że jej siostra usłyszy audycję.""",Alicja zasługuje na pochwałę.,W,target
-16,270NXF,"""Natalia chce polecieć do Finlandii.""",brat Natalii jest poważnie chory.,N,filler
-17,092MXK,"""Jędrzej myśli, że jeśli włączy czajnik, to woda zacznie się gotować.""",Jędrzej zasługuje na naganę.,W,target
-18,114MXK,"""Luiza myśli, że jeśli znany ekspert wyda opinię, to wielu ludzi mu uwierzy.""",Luiza zasługuje na pochwałę.,C,target
-19,047WXZ,"""Pola wie, że Małgorzata urodziła się dwudziestego września 1992 roku.""",Pola zasługuje na naganę.,Z,target
-20,266NXF,"""Niektóre słonie są duże.""",wszystkie słonie są silne.,N,filler
-21,056WXZ,"""Michał wie, że Piotr dostał SMS dwie minuty temu.""",Michał zasługuje na naganę.,Z,target
-22,260PXF,"""Olek położył się spać.""",Olek położył się do łóżka.,P R,filler
-23,268NXF,"""Juliusz wziął udział w loterii.""",Juliusz wygra główną nagrodę.,N,filler
-24,267NXF,"""Pawła dotkliwie pokąsały komary.""",wróg Pawła planuje go zabić.,N,filler
-25,005WXO,"""Teresa wie, że łoś euroazjatycki występuje w lasach Eurazji i Ameryki Północnej.""",Teresa zasługuje na pochwałę.,O,target
-26,209LXF,"""Piosenkarka jeszcze nie wie, że jej nowy utwór zyskuje dużą popularność za granicą.""",nowy utwór piosenkarki zyskuje dużą popularność za granicą.,L,filler
-27,089WXK,"""Wojciech wie, że założenie granatowego swetra sprawi, że on i jego brat będą podobnie ubrani.""",Wojciech zasługuje na pochwałę.,W,target
-28,095WXK,"""Tina wie, że prośba Sylwii spowoduje, że jej syn położy książkę na stole.""",Tina zasługuje na naganę.,C,target
-29,018WXO,"""Sara wie, że w Kanadzie znajduje się więcej jezior niż w którymkolwiek innym kraju na świecie.""",Sara zasługuje na pochwałę.,O,target
-30,244PXF,"""W poniedziałki i środy Natasza chodzi na lekcje węgierskiego.""",Natasza nie chodzi na lekcje węgierskiego we wtorki.,P Q,filler
-31,083WXK,"""Zygmunt wie, że jeśli Filip otworzy drzwi, to będzie go widać z korytarza.""",Zygmunt zasługuje na naganę.,C,target
-32,245PXF,"""W Warszawie i w Krakowie zanotowano rekordowo niskie temperatury.""",w Poznaniu temperatura nie była rekordowo niska.,P Q,filler
-33,091WXK,"""Paulina wie, że jeżeli Mikołaj otworzy pudełko z kremem, to jego współlokator poczuje zapach ciastek.""",Paulina zasługuje na naganę.,C,target
-34,241PXF,"""Przychodnia jest otwarta w dni powszednie od ósmej rano.""",przychodnia jest zamknięta w niedziele.,P Q,filler
-35,094MXK,"""Nina myśli, że zrobienie przez Renatę kolejnego zdjęcia sprawi, że będzie miała w galerii dwieście trzydzieści fotografii.""",Nina zasługuje na pochwałę.,C,target
-36,233PXF,"""Ksenia zjadła obiad i poszła do pracy.""",Ksenia zjadła obiad przed pracą.,P sekwencja,filler
-37,205LXF,"""Mateusz dostał prezent od swojej siostry.""",Mateusz ma siostrę.,L,filler
-38,229PXF,"""Troje studentów nie zdało egzaminu.""",wszyscy pozostali studenci zdali.,P skalarne,filler
-39,105WXK,"""Ignacy wie, że wyjście Hanny na łyżwy sprawi, że jej bracia zostaną sami w domu.""",Ignacy zasługuje na naganę.,C,target
-40,016WXO,"""Justyna wie, że 90% ludzi mieszka na półkuli północnej.""",Justyna zasługuje na naganę.,O,target
-41,135WXK,"""Dominik wie, że napisanie artykułu o zagrożonych gatunkach pomoże je uratować.""",Dominik zasługuje na pochwałę.,W,target
-42,259PXF,"""Kajtek przyniósł chleb ze sklepu.""",Kajtek zapłacił za chleb w sklepie.,P R,filler
-43,090MXK,"""Malwina myśli, że jeśli Daniel spojrzy na zegarek, to jego przyjaciel zrobi to samo.""",Malwina zasługuje na pochwałę.,C,target
-44,082MXK,"""Eliza myśli, że jeżeli Julia zapali światło, to domownicy to zauważą.""",Eliza zasługuje na pochwałę.,C,target
-45,222PXF,"""Andżelika ma dwoje dzieci.""",Andżelika nie ma więcej niż dwoje dzieci.,P skalarne,filler
-46,044MXZ,"""Bogdan myśli, że Dorota dostrzegła za oknem zaśnieżone czubki drzew.""",Bogdan zasługuje na naganę.,Z,target
-47,155MXK,"""Jacek myśli, że niezadbanie o stan urządzeń na placu zabaw zagrozi bezpieczeństwu dzieci.""",Jacek zasługuje na naganę.,W,target
-48,274NXF,"""Wanda wróciła do zdrowia po grypie.""",Wanda nie ma samochodu.,N,filler
-49,023MXO,"""Sebastian myśli, że Polska co roku uzyskuje coraz wyższe miejsce w światowym rankingu szczęśliwości.""",Sebastian zasługuje na naganę.,O,target
-50,067MXZ,"""Estera myśli, że Aneta usłyszała w radiu swoją ulubioną piosenkę.""",Estera zasługuje na naganę.,Z,target
-51,046MXZ,"""Dawid myśli, że Szymon obudził się o siódmej dwadzieścia.""",Dawid zasługuje na pochwałę.,Z,target
-52,238PXF,"""Ireneusz miał wypadek samochodowy i przeszedł operację.""",wypadek miał miejsce przed operacją.,P sekwencja,filler
-53,103WXK,"""Albert wie, że wciśnięcie przycisku spowoduje, że światło w pokoju zgaśnie.""",Albert zasługuje na pochwałę.,W,target
-54,052WXZ,"""Kaja wie, że pierwszego stycznia w Tatrach spadł śnieg.""",Kaja zasługuje na naganę.,Z,target
-55,246PXF,"""Malarka na swoim najnowszym obrazie użyła żółtej, czerwonej i czarnej farby.""",malarka nie użyła niebieskiej farby.,P Q,filler
-56,116MXK,"""Alfred myśli, że jeżeli ściszy głos, to brat go nie usłyszy.""",Alfred zasługuje na naganę.,W,target
-57,007WXO,"""Kinga wie, że kora większości gatunków brzozy jest biała.""",Kinga zasługuje na naganę.,O,target
-58,208LXF,"""Żadne zwierzę nie jest tak szybkie jak Struś Pędziwiatr.""",wszystkie psy są wolniejsze niż Struś Pędziwiatr.,L,filler
-59,224PXF,"""Większość psów ma cztery nogi.""",nie wszystkie psy mają cztery nogi.,P skalarne,filler
-60,017MXO,"""Ola myśli, że w Rosji jest jedenaście stref czasowych.""",Ola zasługuje na naganę.,O,target
-61,265NXF,"""Adrianna dowiedziała się, kto będzie jej rywalem w konkursie.""",w Krakowie spadł ulewny deszcz.,N,filler
-62,055MXZ,"""Celina myśli, że Amelia poczuła dochodzący z kuchni zapach oregano.""",Celina zasługuje na pochwałę.,Z,target
-63,258PXF,"""Byliśmy we wtorek w kinie.""",obejrzeliśmy w kinie film.,P R,filler
-64,081WXK,"""Anna wie, że przyjście o jedenastej spowoduje, że spotka dozorcę.""",Anna zasługuje na pochwałę.,W,target
-65,223PXF,"""Niektórzy mężczyźni mają wąsy.""",nie wszyscy mężczyźni mają wąsy.,P skalarne,filler
-66,249PXF,"""W marcu i w kwietniu wciąż będzie zimno.""",w maju nie będzie już zimno.,P Q,filler
-67,202LXF,"""Matylda wiedziała, że książka została zniszczona.""",książka została zniszczona.,L,filler
-68,042MXZ,"""Marcelina myśli, że na południu Polski ciśnienie powietrza wzrosło.""",Marcelina zasługuje na pochwałę.,Z,target
-69,262NXF,"""Feliks znalazł nową pracę.""",Feliks urodził się w maju.,N,filler
-70,210LXF,"""Jarek nie zauważył, że jego pies wybiegł z domu.""",pies Jarka wybiegł z domu.,L,filler
-71,211LXF,"""Robert jest kawalerem.""",Robert jest nieżonatym mężczyzną.,L,filler
-72,096MXK,"""Marzena myśli, że kiedy zapyta, jak Grzegorzowi minął dzień, on opowie, co robił w pracy.""",Marzena zasługuje na naganę.,W,target
-73,207LXF,"""Wszyscy czarodzieje są inteligentni.""",Harry Potter jest inteligentny.,L,filler
-74,206LXF,"""Irena domyśliła się, że jej córka przyjechała pociągiem.""",córka Ireny przyjechała pociągiem.,L,filler
-75,230PXF,"""Możliwe, że śmierć nastąpiła w wyniku nieszczęśliwego wypadku.""","nie jest pewne, czy to był wypadek.",P skalarne,filler
-76,015MXO,"""Ilona myśli, że oko strusia jest większe od jego mózgu.""",Ilona zasługuje na pochwałę.,O,target
-77,054WXZ,"""Rupert wie, że Ludwice przyśniło się, że rozmawiała z siostrą o pogodzie.""",Rupert zasługuje na pochwałę.,Z,target
-78,139MXK,"""Pielęgniarka myśli, że zastosowanie się przez Laurę do zaleceń lekarza spowoduje, że jej dziecko urodzi się zdrowe.""",pielęgniarka zasługuje na pochwałę.,C,target
-79,263NXF,"""Większość ludzi umie pisać.""",żaden człowiek nie umie czytać.,N,filler
-80,275NXF,"""Wszyscy pasażerowie samolotu przeżyli katastrofę.""",niektórzy pasażerowie są w ciężkim stanie.,N,filler
-81,088MXK,"""Emilia myśli, że jeśli wyjdzie na podwórko, to spotka sąsiada.""",Emilia zasługuje na naganę.,W,target
-82,269NXF,"""Kasia widzi Księżyc w pełni.""",ludzkość czeka zagłada.,N,filler
-83,099WXK,"""Ida wie, że jeśli Kamil kupi ryż, to jego rodzina zje risotto na obiad.""",Ida zasługuje na naganę.,C,target
-84,104MXK,"""Iga myśli, że jeśli Monika poleci ten film, to jej kolega go obejrzy.""",Iga zasługuje na pochwałę.,C,target
-85,237PXF,"""Kot ziewnął i przeciągnął się.""","kot najpierw ziewnął, a potem się przeciągnął.",P sekwencja,filler
-86,272NXF,"""Sandra usłyszała od przyjaciółki, że w ich ulubionej księgarni jest promocja.""",przyjaciółka Sandry jest wysoka.,N,filler
-87,059MXZ,"""Marta myśli, że kamyk wpadł do wody z pluskiem.""",Marta zasługuje na pochwałę.,Z,target
-88,213LXF,"""Józef wie, że jego matka studiowała psychologię.""",matka Józefa studiowała psychologię.,L,filler
-89,248PXF,"""Węgierskie spółgłoski są łatwe w wymowie.""",wymowa węgierskich samogłosek nie jest łatwa.,P Q,filler
-90,212LXF,"""Sonia została słusznie oskarżona o kradzież naszyjnika.""",Sonia ukradła naszyjnik.,L,filler
-91,087WXK,"""Lucjusz wie, że jeżeli studentka kupi czerwony zeszyt, to jej kolega to zauważy.""",Lucjusz zasługuje na naganę.,C,target
-92,218LXF,"""Norbert wyzdrowiał po kilkutygodniowym pobycie w szpitalu.""",Norbert był chory.,L,filler
-93,203LXF,"""Lekarz zauważył, że pacjent ma szmery w sercu.""",pacjent ma szmery w sercu.,L,filler
-94,242PXF,"""Krzysztof niechcący wpadł na stojący na chodniku zielony rower.""",to nie był rower Krzysztofa.,P Q,filler
-95,011MXO,"""Wioletta myśli, że w styczniu Ziemia znajduje się najbliżej Słońca.""",Wioletta zasługuje na pochwałę.,O,target
-96,251PXF,"""Ewa złamała palec u nogi.""",Ewa złamała swój palec.,P R,filler
-97,216LXF,"""Żona burmistrza wywołała skandal.""",burmistrz ma żonę.,L,filler
-98,254PXF,"""Ojciec przyjechał na spotkanie samochodem.""",ojciec przyjechał własnym samochodem.,P R,filler
-99,113WXK,"""Muzyk wie, że wydanie singla spowoduje, że nowy utwór będzie często grany w radiu.""",Muzyk zasługuje na pochwałę.,W,target
-100,253PXF,"""Kwiatkowscy weszli do domu.""",Kwiatkowscy weszli do własnego domu.,P R,filler
-101,118MXK,"""Ula myśli, że jeśli Leon obejrzy z Joanną ten film, to jej nastój diametralnie się zmieni.""",Ula zasługuje na pochwałę.,C,target
-102,108MXK,"""Igor myśli, że jeśli Klaudia napisze wiadomość do męża, to on ją przeczyta.""",Igor zasługuje na pochwałę.,C,target
-103,009MXO,"""Jola myśli, że kanczyl to najmniejszy ssak kopytny na świecie.""",Jola zasługuje na naganę.,O,target
-104,250PXF,"""Ulubiona nauczycielka Henia uczy plastyki i muzyki.""",ulubiona nauczycielka Henia nie uczy etyki.,P Q,filler
-105,003WXO,"""Agnieszka wie, że siedemnaście jest liczbą pierwszą.""",Agnieszka zasługuje na naganę.,O,target
-106,232PXF,"""Marek poszedł do sklepu i kupił bułki.""","Marek najpierw poszedł do sklepu, a następnie kupił bułki.",P sekwencja,filler
-107,043WXZ,"""Zofia wie, że drugiego sierpnia Słońce zajdzie o dwudziestej dwadzieścia pięć.""",Zofia zasługuje na naganę.,Z,target
-108,225PXF,"""Dziecko zjadło kilka kawałków ciasta.""",dziecko nie zjadło wszystkich kawałków ciasta.,P skalarne,filler
-109,236PXF,"""Przyjaciele pójdą do kina i na karaoke.""",przyjaciele najpierw pójdą do kina.,P sekwencja,filler
-110,221PXF,"""Niektóre dzieci są nieposłuszne.""",nie wszystkie dzieci są nieposłuszne.,P skalarne,filler
-111,123MXK,"""Agata myśli, że jeśli zorganizuje przyjęcie urodzinowe, to dostanie dużo prezentów.""",Agata zasługuje na naganę.,W,target
-112,247PXF,"""Beata dała świnkom morskim marchewkę i seler.""",Beata nie dała świnkom morskim pietruszki.,P Q,filler
-113,093WXK,"""Witold wie, że jeżeli poda matce lustro, to ona zobaczy swoje odbicie.""",Witold zasługuje na pochwałę.,W,target
-114,231PXF,"""Olga wyszła za mąż i urodziła dziecko.""",ślub Olgi poprzedził narodziny dziecka.,P sekwencja,filler
-115,228PXF,"""Iza podejrzewa, że jej mąż ją zdradza.""","Iza nie wie, czy jej mąż ją zdradza.",P skalarne,filler
-116,101MXK,"""Stefan myśli, że wypożyczenie książki spowoduje, że jego kolega Cezary zobaczy jej okładkę.""",Stefan zasługuje na naganę.,W,target
-117,227PXF,"""Krysia myśli, że jej brat późno wróci.""","Krysia nie wie, czy jej brat późno wróci.",P skalarne,filler
-118,020WXO,"""Damian wie, że stolica Andory jest najwyżej położoną stolicą w Europie.""",Damian zasługuje na naganę.,O,target
-119,002MXO,"""Róża myśli, że woda to tlenek wodoru.""",Róża zasługuje na pochwałę.,O,target
-120,051MXZ,"""Jan myśli, że w środę sklep był otwarty do osiemnastej.""",Jan zasługuje na pochwałę.,Z,target
-121,279NXF,"""Długotrwałe susze spowodowały śmierć wielu zwierząt.""",Oliwia straciła dach nad głową.,N,filler
-122,057MXZ,"""Adam myśli, że książka, upadając, otworzyła się na sto dwudziestej czwartej stronie.""",Adam zasługuje na naganę.,Z,target
-123,111MXK,"""Iwona myśli, że jeśli nagra film, to dwie osoby go obejrzą.""",Iwona zasługuje na naganę.,W,target
-124,053MXZ,"""Joachim myśli, że pociąg do Berlina odjechał o ósmej piętnaście.""",Joachim zasługuje na naganę.,Z,target
-125,215LXF,"""Wszyscy rycerze już nie żyją.""","jeśli ktoś żyje, to nie jest rycerzem.",L,filler
-126,117WXK,"""Hubert wie, że pojechanie autobusem 128 spowoduje, że dotrze na miejsce o czwartej po południu.""",Hubert zasługuje na pochwałę.,W,target
-127,107WXK,"""Gabriela wie, że zamknięcie drzwi spowoduje, że nikt nie będzie mógł wejść do środka.""",Gabriela zasługuje na pochwałę.,W,target
-128,014WXO,"""Gilbert wie, że spośród wszystkich gatunków ptaków tylko kolibry umieją latać do tyłu.""",Gilbert zasługuje na pochwałę.,O,target
-129,278NXF,"""Jedna z myszy laboratoryjnych poważnie zachorowała.""",w Zakopanem zanotowano rekordowe opady śniegu.,N,filler
-130,109WXK,"""Martyna wie, że jeżeli Patrycja wywiesi transparent, to wiele osób go zobaczy.""",Martyna zasługuje na naganę.,C,target
-131,243PXF,"""Grzegorz założył niebieską koszulę, niebieskie buty, a nawet niebieski kapelusz.""",spodnie Grzegorza nie są niebieskie.,P Q,filler
-132,058WXZ,"""Franciszka wie, że temperatura w Łodzi utrzymała się na podobnym poziomie przez cały tydzień.""",Franciszka zasługuje na pochwałę.,Z,target
-133,234PXF,"""Tenisistka wzięła udział w turnieju w Wiedniu i we Lwowie.""",turniej w Wiedniu odbył się wcześniej niż ten we Lwowie.,P sekwencja,filler
-134,049WXZ,"""Wiktoria wie, że konkurs zakończył się dwudziestego drugiego maja.""",Wiktoria zasługuje na pochwałę.,Z,target
-135,280NXF,"""Większość lekarzy jest artystami.""",większość artystów jest lekarzami.,N,filler
-136,226PXF,"""Nowożeńcy pojadą w góry lub nad morze.""",nowożeńcy nie pojadą w oba te miejsca.,P skalarne,filler
-137,098MXK,"""Franek myśli, że pociągnięcie dźwigni przez Łukasza spowoduje, że urządzenie zatrzyma się.""",Franek zasługuje na pochwałę.,C,target
-138,013MXO,"""Aurelia myśli, że pingwiny potrafią nurkować na głębokość ponad 250 metrów.""",Aurelia zasługuje na naganę.,O,target
-139,220LXF,"""Tadeusz został niesłusznie skazany za zabicie swojej żony.""",Tadeusz nie zabił swojej żony.,L,filler
-140,264NXF,"""Konrad wczoraj spadł z krzesła.""",Konrad wysłał dzisiaj dwa listy.,N,filler
-141,115WXK,"""Kacper wie, że podgłośnienie muzyki przez Marcina sprawi, że usłyszy ją cała jego rodzina.""",Kacper zasługuje na naganę.,C,target
-142,060WXZ,"""Ernest wie, że Aleks wylosował kartkę z numerem pięć.""",Ernest zasługuje na naganę.,Z,target
-143,257PXF,"""Narzeczeni wezmą ślub w grudniu.""",ślub odbędzie się w grudniu bieżącego roku.,P R,filler
-144,006MXO,"""Staszek myśli, że pierwiastek z szesnastu wynosi cztery.""",Staszek zasługuje na pochwałę.,O,target
-145,010WXO,"""Leszek wie, że liczba atomowa cynku wynosi trzydzieści.""",Leszek zasługuje na pochwałę.,O,target
-146,271NXF,"""Polska wygrała mistrzostwa świata w piłce ręcznej.""",na Mazowszu zboże wyjątkowo obrodziło.,N,filler
-147,019MXO,"""Basia myśli, że grecki hymn państwowy jest najdłuższym hymnem na świecie.""",Basia zasługuje na pochwałę.,O,target
-148,148WXK,"""Kierownik wie, że jeśli dyrektor zwolni Kamilę, to zabraknie jej pieniędzy na utrzymanie.""",kierownik zasługuje na naganę.,C,target
-149,214LXF,"""Trener dowiedział się, że jeden z zawodników stosował doping.""",jeden z zawodników stosował doping.,L,filler
-150,045WXZ,"""Bożena wie, że w tym roku zwycięskim numerem na loterii był numer 281.""",Bożena zasługuje na pochwałę.,Z,target
-151,106MXK,"""Selekcjoner myśli, że jeśli wpuści na boisko Kowalskiego, to mecz zakończy się remisem.""",selekcjoner zasługuje na naganę.,W,target
-152,001WXO,"""Jerzy wie, że Ziemia jest okrągła.""",Jerzy zasługuje na pochwałę.,O,target
-153,235PXF,"""Wiewiórka wspięła się na drzewo i zjadła orzech.”",wiewiórka zjadła orzech po wejściu na drzewo.,P sekwencja,filler
-154,097WXK,"""Rafał wie, że wezwanie od szefa sprawi, że pójdzie do jego gabinetu.""",Rafał zasługuje na pochwałę.,W,target
-155,256PXF,"""Przed pójściem spać Tymek przytulił kota.""",Tymek przytulił swojego kota.,P R,filler
-156,204LXF,"""Nie wszyscy studenci zdali egzamin.""",niektórzy studenci nie zdali egzaminu.,L,filler
-157,119WXK,"""Turysta wie, że wybranie przez Janinę żółtego szlaku sprawi, że ona i jej córka będą szły przez dwie i pół godziny.""",turysta zasługuje na naganę.,C,target
-158,004MXO,"""Arek myśli, że żyrafa jest najwyższym zwierzęciem lądowym.""",Arek zasługuje na naganę.,O,target
-159,261NXF,"""Karol dostał dobrą ocenę z matematyki.""",Wisła wystąpiła z brzegów.,N,filler
+14,006MXO,"""Staszek myśli, że pierwiastek z szesnastu wynosi cztery.""",Staszek zasługuje na pochwałę.,O,target
+15,210LXF,"""Jarek nie zauważył, że jego pies wybiegł z domu.""",pies Jarka wybiegł z domu.,L,filler
+16,221PXF,"""Niektóre dzieci są nieposłuszne.""",nie wszystkie dzieci są nieposłuszne.,P skalarne,filler
+17,123MXK,"""Agata myśli, że jeśli zorganizuje przyjęcie urodzinowe, to dostanie dużo prezentów.""",Agata zasługuje na naganę.,W,target
+18,250PXF,"""Ulubiona nauczycielka Henia uczy plastyki i muzyki.""",ulubiona nauczycielka Henia nie uczy etyki.,P Q,filler
+19,105WXK,"""Ignacy wie, że wyjście Hanny na łyżwy sprawi, że jej bracia zostaną sami w domu.""",Ignacy zasługuje na naganę.,C,target
+20,081WXK,"""Anna wie, że przyjście o jedenastej spowoduje, że spotka dozorcę.""",Anna zasługuje na pochwałę.,W,target
+21,259PXF,"""Kajtek przyniósł chleb ze sklepu.""",Kajtek zapłacił za chleb w sklepie.,P R,filler
+22,097WXK,"""Rafał wie, że wezwanie od szefa sprawi, że pójdzie do jego gabinetu.""",Rafał zasługuje na pochwałę.,W,target
+23,232PXF,"""Marek poszedł do sklepu i kupił bułki.""","Marek najpierw poszedł do sklepu, a następnie kupił bułki.",P sekwencja,filler
+24,274NXF,"""Wanda wróciła do zdrowia po grypie.""",Wanda nie ma samochodu.,N,filler
+25,272NXF,"""Sandra usłyszała od przyjaciółki, że w ich ulubionej księgarni jest promocja.""",przyjaciółka Sandry jest wysoka.,N,filler
+26,051MXZ,"""Jan myśli, że w środę sklep był otwarty do osiemnastej.""",Jan zasługuje na pochwałę.,Z,target
+27,090MXK,"""Malwina myśli, że jeśli Daniel spojrzy na zegarek, to jego przyjaciel zrobi to samo.""",Malwina zasługuje na pochwałę.,C,target
+28,251PXF,"""Ewa złamała palec u nogi.""",Ewa złamała swój palec.,P R,filler
+29,205LXF,"""Mateusz dostał prezent od swojej siostry.""",Mateusz ma siostrę.,L,filler
+30,106MXK,"""Selekcjoner myśli, że jeśli wpuści na boisko Kowalskiego, to mecz zakończy się remisem.""",selekcjoner zasługuje na naganę.,W,target
+31,118MXK,"""Ula myśli, że jeśli Leon obejrzy z Joanną ten film, to jej nastój diametralnie się zmieni.""",Ula zasługuje na pochwałę.,C,target
+32,093WXK,"""Witold wie, że jeżeli poda matce lustro, to ona zobaczy swoje odbicie.""",Witold zasługuje na pochwałę.,W,target
+33,217LXF,"""Ojciec Łucji zginął w wypadku samochodowym.""",ojciec Łucji nie żyje.,L,filler
+34,082MXK,"""Eliza myśli, że jeżeli Julia zapali światło, to domownicy to zauważą.""",Eliza zasługuje na pochwałę.,C,target
+35,135WXK,"""Dominik wie, że napisanie artykułu o zagrożonych gatunkach pomoże je uratować.""",Dominik zasługuje na pochwałę.,W,target
+36,215LXF,"""Wszyscy rycerze już nie żyją.""","jeśli ktoś żyje, to nie jest rycerzem.",L,filler
+37,258PXF,"""Byliśmy we wtorek w kinie.""",obejrzeliśmy w kinie film.,P R,filler
+38,047WXZ,"""Pola wie, że Małgorzata urodziła się dwudziestego września 1992 roku.""",Pola zasługuje na naganę.,Z,target
+39,238PXF,"""Ireneusz miał wypadek samochodowy i przeszedł operację.""",wypadek miał miejsce przed operacją.,P sekwencja,filler
+40,023MXO,"""Sebastian myśli, że Polska co roku uzyskuje coraz wyższe miejsce w światowym rankingu szczęśliwości.""",Sebastian zasługuje na naganę.,O,target
+41,001WXO,"""Jerzy wie, że Ziemia jest okrągła.""",Jerzy zasługuje na pochwałę.,O,target
+42,020WXO,"""Damian wie, że stolica Andory jest najwyżej położoną stolicą w Europie.""",Damian zasługuje na naganę.,O,target
+43,248PXF,"""Węgierskie spółgłoski są łatwe w wymowie.""",wymowa węgierskich samogłosek nie jest łatwa.,P Q,filler
+44,239PXF,"""Zbyszek rozwiódł się i wyjechał z miasta.""",rozwód Zbyszka poprzedził jego wyjazd.,P sekwencja,filler
+45,242PXF,"""Krzysztof niechcący wpadł na stojący na chodniku zielony rower.""",to nie był rower Krzysztofa.,P Q,filler
+46,107WXK,"""Gabriela wie, że zamknięcie drzwi spowoduje, że nikt nie będzie mógł wejść do środka.""",Gabriela zasługuje na pochwałę.,W,target
+47,203LXF,"""Lekarz zauważył, że pacjent ma szmery w sercu.""",pacjent ma szmery w sercu.,L,filler
+48,052WXZ,"""Kaja wie, że pierwszego stycznia w Tatrach spadł śnieg.""",Kaja zasługuje na naganę.,Z,target
+49,264NXF,"""Konrad wczoraj spadł z krzesła.""",Konrad wysłał dzisiaj dwa listy.,N,filler
+50,230PXF,"""Możliwe, że śmierć nastąpiła w wyniku nieszczęśliwego wypadku.""","nie jest pewne, czy to był wypadek.",P skalarne,filler
+51,275NXF,"""Wszyscy pasażerowie samolotu przeżyli katastrofę.""",niektórzy pasażerowie są w ciężkim stanie.,N,filler
+52,002MXO,"""Róża myśli, że woda to tlenek wodoru.""",Róża zasługuje na pochwałę.,O,target
+53,226PXF,"""Nowożeńcy pojadą w góry lub nad morze.""",nowożeńcy nie pojadą w oba te miejsca.,P skalarne,filler
+54,240PXF,"""Zagrzmiało i spadł ulewny deszcz.""",grzmot poprzedził ulewę.,P sekwencja,filler
+55,236PXF,"""Przyjaciele pójdą do kina i na karaoke.""",przyjaciele najpierw pójdą do kina.,P sekwencja,filler
+56,111MXK,"""Iwona myśli, że jeśli nagra film, to dwie osoby go obejrzą.""",Iwona zasługuje na naganę.,W,target
+57,046MXZ,"""Dawid myśli, że Szymon obudził się o siódmej dwadzieścia.""",Dawid zasługuje na pochwałę.,Z,target
+58,277NXF,"""Odkąd zmienił się właściciel firmy, zyski znacznie wzrosły.""",nowy właściciel przeżył dwa groźne wypadki samochodowe.,N,filler
+59,010WXO,"""Leszek wie, że liczba atomowa cynku wynosi trzydzieści.""",Leszek zasługuje na pochwałę.,O,target
+60,099WXK,"""Ida wie, że jeśli Kamil kupi ryż, to jego rodzina zje risotto na obiad.""",Ida zasługuje na naganę.,C,target
+61,208LXF,"""Żadne zwierzę nie jest tak szybkie jak Struś Pędziwiatr.""",wszystkie psy są wolniejsze niż Struś Pędziwiatr.,L,filler
+62,087WXK,"""Lucjusz wie, że jeżeli studentka kupi czerwony zeszyt, to jej kolega to zauważy.""",Lucjusz zasługuje na naganę.,C,target
+63,241PXF,"""Przychodnia jest otwarta w dni powszednie od ósmej rano.""",przychodnia jest zamknięta w niedziele.,P Q,filler
+64,115WXK,"""Kacper wie, że podgłośnienie muzyki przez Marcina sprawi, że usłyszy ją cała jego rodzina.""",Kacper zasługuje na naganę.,C,target
+65,139MXK,"""Pielęgniarka myśli, że zastosowanie się przez Laurę do zaleceń lekarza spowoduje, że jej dziecko urodzi się zdrowe.""",pielęgniarka zasługuje na pochwałę.,C,target
+66,207LXF,"""Wszyscy czarodzieje są inteligentni.""",Harry Potter jest inteligentny.,L,filler
+67,253PXF,"""Kwiatkowscy weszli do domu.""",Kwiatkowscy weszli do własnego domu.,P R,filler
+68,257PXF,"""Narzeczeni wezmą ślub w grudniu.""",ślub odbędzie się w grudniu bieżącego roku.,P R,filler
+69,067MXZ,"""Estera myśli, że Aneta usłyszała w radiu swoją ulubioną piosenkę.""",Estera zasługuje na naganę.,Z,target
+70,219LXF,"""Danuta jest weganką.""",Danuta nie spożywa produktów pochodzenia zwierzęcego.,L,filler
+71,003WXO,"""Agnieszka wie, że siedemnaście jest liczbą pierwszą.""",Agnieszka zasługuje na naganę.,O,target
+72,243PXF,"""Grzegorz założył niebieską koszulę, niebieskie buty, a nawet niebieski kapelusz.""",spodnie Grzegorza nie są niebieskie.,P Q,filler
+73,231PXF,"""Olga wyszła za mąż i urodziła dziecko.""",ślub Olgi poprzedził narodziny dziecka.,P sekwencja,filler
+74,086MXK,"""Wiktoria myśli, że jeśli Antoni ugotuje dla żony danie z pomidorami, to ona poczuje ich smak.""",Wiktoria zasługuje na pochwałę.,C,target
+75,206LXF,"""Irena domyśliła się, że jej córka przyjechała pociągiem.""",córka Ireny przyjechała pociągiem.,L,filler
+76,096MXK,"""Marzena myśli, że kiedy zapyta, jak Grzegorzowi minął dzień, on opowie, co robił w pracy.""",Marzena zasługuje na naganę.,W,target
+77,202LXF,"""Matylda wiedziała, że książka została zniszczona.""",książka została zniszczona.,L,filler
+78,265NXF,"""Adrianna dowiedziała się, kto będzie jej rywalem w konkursie.""",w Krakowie spadł ulewny deszcz.,N,filler
+79,084MXK,"""Maciek myśli, że jeżeli odsłoni żaluzje, to jego siostra spojrzy za okno.""",Maciek zasługuje na naganę.,W,target
+80,254PXF,"""Ojciec przyjechał na spotkanie samochodem.""",ojciec przyjechał własnym samochodem.,P R,filler
+81,209LXF,"""Piosenkarka jeszcze nie wie, że jej nowy utwór zyskuje dużą popularność za granicą.""",nowy utwór piosenkarki zyskuje dużą popularność za granicą.,L,filler
+82,018WXO,"""Sara wie, że w Kanadzie znajduje się więcej jezior niż w którymkolwiek innym kraju na świecie.""",Sara zasługuje na pochwałę.,O,target
+83,201LXF,"""Kazik zrozumiał, w którym miejscu popełnił błąd.""",Kazik popełnił błąd.,L,filler
+84,244PXF,"""W poniedziałki i środy Natasza chodzi na lekcje węgierskiego.""",Natasza nie chodzi na lekcje węgierskiego we wtorki.,P Q,filler
+85,218LXF,"""Norbert wyzdrowiał po kilkutygodniowym pobycie w szpitalu.""",Norbert był chory.,L,filler
+86,019MXO,"""Basia myśli, że grecki hymn państwowy jest najdłuższym hymnem na świecie.""",Basia zasługuje na pochwałę.,O,target
+87,266NXF,"""Niektóre słonie są duże.""",wszystkie słonie są silne.,N,filler
+88,263NXF,"""Większość ludzi umie pisać.""",żaden człowiek nie umie czytać.,N,filler
+89,255PXF,"""Wieczorem Daria ułożyła dziecko do snu.""",Daria ułożyła do snu swoje dziecko.,P R,filler
+90,116MXK,"""Alfred myśli, że jeżeli ściszy głos, to brat go nie usłyszy.""",Alfred zasługuje na naganę.,W,target
+91,245PXF,"""W Warszawie i w Krakowie zanotowano rekordowo niskie temperatury.""",w Poznaniu temperatura nie była rekordowo niska.,P Q,filler
+92,256PXF,"""Przed pójściem spać Tymek przytulił kota.""",Tymek przytulił swojego kota.,P R,filler
+93,103WXK,"""Albert wie, że wciśnięcie przycisku spowoduje, że światło w pokoju zgaśnie.""",Albert zasługuje na pochwałę.,W,target
+94,059MXZ,"""Marta myśli, że kamyk wpadł do wody z pluskiem.""",Marta zasługuje na pochwałę.,Z,target
+95,053MXZ,"""Joachim myśli, że pociąg do Berlina odjechał o ósmej piętnaście.""",Joachim zasługuje na naganę.,Z,target
+96,270NXF,"""Natalia chce polecieć do Finlandii.""",brat Natalii jest poważnie chory.,N,filler
+97,212LXF,"""Sonia została słusznie oskarżona o kradzież naszyjnika.""",Sonia ukradła naszyjnik.,L,filler
+98,262NXF,"""Feliks znalazł nową pracę.""",Feliks urodził się w maju.,N,filler
+99,009MXO,"""Jola myśli, że kanczyl to najmniejszy ssak kopytny na świecie.""",Jola zasługuje na naganę.,O,target
+100,005WXO,"""Teresa wie, że łoś euroazjatycki występuje w lasach Eurazji i Ameryki Północnej.""",Teresa zasługuje na pochwałę.,O,target
+101,083WXK,"""Zygmunt wie, że jeśli Filip otworzy drzwi, to będzie go widać z korytarza.""",Zygmunt zasługuje na naganę.,C,target
+102,279NXF,"""Długotrwałe susze spowodowały śmierć wielu zwierząt.""",Oliwia straciła dach nad głową.,N,filler
+103,045WXZ,"""Bożena wie, że w tym roku zwycięskim numerem na loterii był numer 281.""",Bożena zasługuje na pochwałę.,Z,target
+104,089WXK,"""Wojciech wie, że założenie granatowego swetra sprawi, że on i jego brat będą podobnie ubrani.""",Wojciech zasługuje na pochwałę.,W,target
+105,222PXF,"""Andżelika ma dwoje dzieci.""",Andżelika nie ma więcej niż dwoje dzieci.,P skalarne,filler
+106,276NXF,"""Adrian wie, że powinien odejść z pracy.""",szefowa Adriana jest zaangażowana w działalność przestępczą.,N,filler
+107,114MXK,"""Luiza myśli, że jeśli znany ekspert wyda opinię, to wielu ludzi mu uwierzy.""",Luiza zasługuje na pochwałę.,C,target
+108,004MXO,"""Arek myśli, że żyrafa jest najwyższym zwierzęciem lądowym.""",Arek zasługuje na naganę.,O,target
+109,228PXF,"""Iza podejrzewa, że jej mąż ją zdradza.""","Iza nie wie, czy jej mąż ją zdradza.",P skalarne,filler
+110,085WXK,"""Alicja wie, że włączenie radia sprawi, że jej siostra usłyszy audycję.""",Alicja zasługuje na pochwałę.,W,target
+111,049WXZ,"""Wiktoria wie, że konkurs zakończył się dwudziestego drugiego maja.""",Wiktoria zasługuje na pochwałę.,Z,target
+112,249PXF,"""W marcu i w kwietniu wciąż będzie zimno.""",w maju nie będzie już zimno.,P Q,filler
+113,014WXO,"""Gilbert wie, że spośród wszystkich gatunków ptaków tylko kolibry umieją latać do tyłu.""",Gilbert zasługuje na pochwałę.,O,target
+114,225PXF,"""Dziecko zjadło kilka kawałków ciasta.""",dziecko nie zjadło wszystkich kawałków ciasta.,P skalarne,filler
+115,016WXO,"""Justyna wie, że 90% ludzi mieszka na półkuli północnej.""",Justyna zasługuje na naganę.,O,target
+116,204LXF,"""Nie wszyscy studenci zdali egzamin.""",niektórzy studenci nie zdali egzaminu.,L,filler
+117,234PXF,"""Tenisistka wzięła udział w turnieju w Wiedniu i we Lwowie.""",turniej w Wiedniu odbył się wcześniej niż ten we Lwowie.,P sekwencja,filler
+118,117WXK,"""Hubert wie, że pojechanie autobusem 128 spowoduje, że dotrze na miejsce o czwartej po południu.""",Hubert zasługuje na pochwałę.,W,target
+119,056WXZ,"""Michał wie, że Piotr dostał SMS dwie minuty temu.""",Michał zasługuje na naganę.,Z,target
+120,227PXF,"""Krysia myśli, że jej brat późno wróci.""","Krysia nie wie, czy jej brat późno wróci.",P skalarne,filler
+121,271NXF,"""Polska wygrała mistrzostwa świata w piłce ręcznej.""",na Mazowszu zboże wyjątkowo obrodziło.,N,filler
+122,042MXZ,"""Marcelina myśli, że na południu Polski ciśnienie powietrza wzrosło.""",Marcelina zasługuje na pochwałę.,Z,target
+123,220LXF,"""Tadeusz został niesłusznie skazany za zabicie swojej żony.""",Tadeusz nie zabił swojej żony.,L,filler
+124,101MXK,"""Stefan myśli, że wypożyczenie książki spowoduje, że jego kolega Cezary zobaczy jej okładkę.""",Stefan zasługuje na naganę.,W,target
+125,098MXK,"""Franek myśli, że pociągnięcie dźwigni przez Łukasza spowoduje, że urządzenie zatrzyma się.""",Franek zasługuje na pochwałę.,C,target
+126,044MXZ,"""Bogdan myśli, że Dorota dostrzegła za oknem zaśnieżone czubki drzew.""",Bogdan zasługuje na naganę.,Z,target
+127,278NXF,"""Jedna z myszy laboratoryjnych poważnie zachorowała.""",w Zakopanem zanotowano rekordowe opady śniegu.,N,filler
+128,060WXZ,"""Ernest wie, że Aleks wylosował kartkę z numerem pięć.""",Ernest zasługuje na naganę.,Z,target
+129,233PXF,"""Ksenia zjadła obiad i poszła do pracy.""",Ksenia zjadła obiad przed pracą.,P sekwencja,filler
+130,148WXK,"""Kierownik wie, że jeśli dyrektor zwolni Kamilę, to zabraknie jej pieniędzy na utrzymanie.""",kierownik zasługuje na naganę.,C,target
+131,091WXK,"""Paulina wie, że jeżeli Mikołaj otworzy pudełko z kremem, to jego współlokator poczuje zapach ciastek.""",Paulina zasługuje na naganę.,C,target
+132,246PXF,"""Malarka na swoim najnowszym obrazie użyła żółtej, czerwonej i czarnej farby.""",malarka nie użyła niebieskiej farby.,P Q,filler
+133,011MXO,"""Wioletta myśli, że w styczniu Ziemia znajduje się najbliżej Słońca.""",Wioletta zasługuje na pochwałę.,O,target
+134,261NXF,"""Karol dostał dobrą ocenę z matematyki.""",Wisła wystąpiła z brzegów.,N,filler
+135,235PXF,"""Wiewiórka wspięła się na drzewo i zjadła orzech.”",wiewiórka zjadła orzech po wejściu na drzewo.,P sekwencja,filler
+136,109WXK,"""Martyna wie, że jeżeli Patrycja wywiesi transparent, to wiele osób go zobaczy.""",Martyna zasługuje na naganę.,C,target
+137,252PXF,"""Tomasz wróci do domu w środę.""",Tomasz wróci w najbliższą środę.,P R,filler
+138,269NXF,"""Kasia widzi Księżyc w pełni.""",ludzkość czeka zagłada.,N,filler
+139,223PXF,"""Niektórzy mężczyźni mają wąsy.""",nie wszyscy mężczyźni mają wąsy.,P skalarne,filler
+140,013MXO,"""Aurelia myśli, że pingwiny potrafią nurkować na głębokość ponad 250 metrów.""",Aurelia zasługuje na naganę.,O,target
+141,237PXF,"""Kot ziewnął i przeciągnął się.""","kot najpierw ziewnął, a potem się przeciągnął.",P sekwencja,filler
+142,224PXF,"""Większość psów ma cztery nogi.""",nie wszystkie psy mają cztery nogi.,P skalarne,filler
+143,213LXF,"""Józef wie, że jego matka studiowała psychologię.""",matka Józefa studiowała psychologię.,L,filler
+144,092MXK,"""Jędrzej myśli, że jeśli włączy czajnik, to woda zacznie się gotować.""",Jędrzej zasługuje na naganę.,W,target
+145,211LXF,"""Robert jest kawalerem.""",Robert jest nieżonatym mężczyzną.,L,filler
+146,012WXO,"""Oskar wie, że u kotów gen odpowiadający za ubarwienie futra znajduje się na chromosomie X.""",Oskar zasługuje na naganę.,O,target
+147,267NXF,"""Pawła dotkliwie pokąsały komary.""",wróg Pawła planuje go zabić.,N,filler
+148,216LXF,"""Żona burmistrza wywołała skandal.""",burmistrz ma żonę.,L,filler
+149,055MXZ,"""Celina myśli, że Amelia poczuła dochodzący z kuchni zapach oregano.""",Celina zasługuje na pochwałę.,Z,target
+150,094MXK,"""Nina myśli, że zrobienie przez Renatę kolejnego zdjęcia sprawi, że będzie miała w galerii dwieście trzydzieści fotografii.""",Nina zasługuje na pochwałę.,C,target
+151,017MXO,"""Ola myśli, że w Rosji jest jedenaście stref czasowych.""",Ola zasługuje na naganę.,O,target
+152,214LXF,"""Trener dowiedział się, że jeden z zawodników stosował doping.""",jeden z zawodników stosował doping.,L,filler
+153,088MXK,"""Emilia myśli, że jeśli wyjdzie na podwórko, to spotka sąsiada.""",Emilia zasługuje na naganę.,W,target
+154,048MXZ,"""Weronika myśli, że tramwaj przyjechał o dziewiątej czterdzieści jeden.""",Weronika zasługuje na naganę.,Z,target
+155,043WXZ,"""Zofia wie, że drugiego sierpnia Słońce zajdzie o dwudziestej dwadzieścia pięć.""",Zofia zasługuje na naganę.,Z,target
+156,247PXF,"""Beata dała świnkom morskim marchewkę i seler.""",Beata nie dała świnkom morskim pietruszki.,P Q,filler
+157,280NXF,"""Większość lekarzy jest artystami.""",większość artystów jest lekarzami.,N,filler
+158,113WXK,"""Muzyk wie, że wydanie singla spowoduje, że nowy utwór będzie często grany w radiu.""",Muzyk zasługuje na pochwałę.,W,target
+159,104MXK,"""Iga myśli, że jeśli Monika poleci ten film, to jej kolega go obejrzy.""",Iga zasługuje na pochwałę.,C,target
