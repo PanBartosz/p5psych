@@ -17,9 +17,9 @@ var loaded = false;
 
 function setup() {
     if (window.location['host'] == 'kognilab.pl'){
-        var url = 'http://kognilab.pl/p5psych/cb/esee/1';
+        var url = 'http://kognilab.pl/p5psych/cb/esee/12';
     } else {
-        var url = 'http://localhost:5000/cb/esee/1';
+        var url = 'http://localhost:5000/cb/esee/12';
     }
 
     httpGet(url, function(response){version = response;})
@@ -108,7 +108,7 @@ function setupExp(){
         var url = 'http://localhost:5000/saveData';
     }
 
-    exp = new Experiment(url, 'centeringf' + '_' + version);
+    exp = new Experiment(url, 'esee' + '_' + version);
 
 
     var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['płeć (K/M/inne)', 'wiek'], additional_info : {'uczestnik' : Math.random().toString(36).substring(7)}});
