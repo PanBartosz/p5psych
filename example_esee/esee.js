@@ -49,7 +49,8 @@ function setupExp(){
     var instr = new Routine();
     instr.addComponent(new TextStimulus({name: 'instruction',
                                          text: function() {return String(instructions_loop.currentTrial['instructions']).replace(/\\n/g, "\n");}, // String test
-                                         pos: [0.5, 0.5]
+                                         pos: [0.5, 0.3],
+                                         textSize: 24
                                         }
                                        ));
     instr.addComponent(new KeyboardResponse({ name : 'instr_resp'}));
