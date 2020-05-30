@@ -63,7 +63,7 @@ function setupExp(){
     implicature = new TextStimulus({name : 'implicate', text: function() {return trials.currentTrial['Sugeruje, że'];}, pos: [0.5, 0.6]});
     implicates = new TextStimulus({name : 'implicate', text: "sugeruje, że", pos: [0.5, 0.5]});
 
-    var response_implies = new KeyboardResponse({name: 'response_sensible', keys: [113, 101]});
+    var response_implies = new KeyboardResponse({name: 'response_sensible', keys: [81, 69]});
 
     displayStimuli.addComponent(sentence);
     displayStimuli.addComponent(implicature);
