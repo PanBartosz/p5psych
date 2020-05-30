@@ -59,8 +59,8 @@ function setupExp(){
 
     var displayStimuli = new Routine();
 
-    sentence = new TextStimulus({name : 'sentence', text: function() {return trials.currentTrial['F1'];}, pos : [0.5, 0.4]});
-    implicature = new TextStimulus({name : 'implicate', text: function() {return trials.currentTrial['F2'];}, pos: [0.5, 0.6]});
+    sentence = new TextStimulus({name : 'sentence', text: function() {return trials.currentTrial['zdanie'];}, pos : [0.5, 0.4]});
+    implicature = new TextStimulus({name : 'implicate', text: function() {return trials.currentTrial['sugeruje'];}, pos: [0.5, 0.6]});
     implicates = new TextStimulus({name : 'implicate', text: "sugeruje, że", pos: [0.5, 0.5]});
 
     var response_implies = new KeyboardResponse({name: 'response_sensible', keys: [113, 101]});
