@@ -65,6 +65,18 @@ def return_cb(exp, nmax):
         return str(randint(1, int(nmax)))
 
 
+@app.after_request
+def add_header(r):
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    """
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
+
 
 @app.route('/badania/badanie_marzec', strict_slashes=False)
 def badanie1():
@@ -81,3 +93,4 @@ def badanie3():
 @app.route('/badania/badanie_esee', strict_slashes=False)
 def badanie_esee():
     return(render_template('badanie4.html'))
+
