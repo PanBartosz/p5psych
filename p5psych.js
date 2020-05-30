@@ -407,10 +407,10 @@ RectComponent.constructor = RectComponent;
 
 function KeyboardResponse({name,
                            keys = [ENTER],
-                           timestart,
-                           timestop,
+                           timestart = 0,
+                           timestop = null,
                            force_end_of_routine = true} = {}){
-    P5Component.call(this, {name});
+    P5Component.call(this, {name, timestart, timestop});
     this.keys = keys;
     this.lock = true;
     this.response = null;
