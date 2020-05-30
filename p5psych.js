@@ -418,6 +418,9 @@ function KeyboardResponse({name,
 }
 KeyboardResponse.prototype = Object.create(P5Component.prototype);
 KeyboardResponse.prototype.update = function(){
+    if (this.timestop != null & (millis() - this.t_start) - this.timestop > 0 ){
+        this.finished = true;
+    }
     if (!keyIsPressed & this.lock){
         this.lock = false;
     }
@@ -434,9 +437,6 @@ KeyboardResponse.prototype.update = function(){
         return true;
     };
 
-    if (this.timestop != null & (millis() - this.t_start) - this.timestop > 0 ){
-        this.finished = true;
-    }
 
 };
 KeyboardResponse.constructor = KeyboardResponse;
