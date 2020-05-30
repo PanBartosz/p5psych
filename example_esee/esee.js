@@ -73,9 +73,9 @@ function setupExp(){
     displayStimuli.addComponent(sentence);
     displayStimuli.addComponent(implicature);
     displayStimuli.addComponent(implicates);
-    displayStimuli.addComponent(response_implies);
     displayStimuli.addComponent(yes_t);
     displayStimuli.addComponent(no_t);
+    displayStimuli.addComponent(response_implies);
 
 
     var interStimuliBreak = new Routine();
