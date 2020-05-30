@@ -68,7 +68,7 @@ function setupExp(){
     yes_t = new TextStimulus({name : "yes_t", text : "TAK - E", pos: [0.8, 0.8], timestop:10000});
     no_t = new TextStimulus({name : "no_t", text : "NIE - Q", pos : [0.2, 0.8], timestop:10000});
 
-    var response_implies = new KeyboardResponse({name: 'response_implies', keys: [81, 69]});
+    var response_implies = new KeyboardResponse({name: 'response_implies', keys: [81, 69], timestop:10000});
 
     displayStimuli.addComponent(sentence);
     displayStimuli.addComponent(implicature);
