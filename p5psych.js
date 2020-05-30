@@ -433,6 +433,11 @@ KeyboardResponse.prototype.update = function(){
     } else {
         return true;
     };
+
+    if (this.timestop != null & (millis() - this.t_start) - this.timestop > 0 ){
+        this.finished = true;
+    }
+
 };
 KeyboardResponse.constructor = KeyboardResponse;
 
