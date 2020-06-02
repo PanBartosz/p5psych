@@ -19,9 +19,9 @@ var loaded = false;
 
 function setup() {
     if (window.location['host'] == 'kognilab.pl'){
-        var url = 'http://kognilab.pl/p5psych/cb/esee/12';
+        var url = 'http://kognilab.pl/p5psych/cb/eseenew/12';
     } else {
-        var url = 'http://localhost:5000/cb/esee/12';
+        var url = 'http://localhost:5000/cb/eseenew/12';
     }
 
     httpGet(url, function(response){version = response;})
