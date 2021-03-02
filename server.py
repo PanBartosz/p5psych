@@ -90,7 +90,11 @@ def badanie2():
 def badanie3():
     return(render_template('badanie3.html'))
 
+
 @app.route('/badania/badanie_esee', strict_slashes=False)
 def badanie_esee():
     return(render_template('badanie4.html'))
 
+@app.route('/badania/badanie_c5', strict_slashes=False)
+def badanie5():
+    return(render_template('badanie5.html'))
