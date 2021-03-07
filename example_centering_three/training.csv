@@ -1,9 +1,9 @@
-,F0,F1,F2,corr
-0,Pierwsze zdanie…,Bartosz lubi jabłka.,Jabłka są zdrowe i smaczne.   ,101
-2,Pierwsze zdanie…,Ewelina kupiła Robertowi chomika.,Robert od dawna marzył o własnym zwierzątku.,101
-1,Pierwsze zdanie…,Bartosz lubi pomarańcze.,Zatańcz ze mną mój autobusie.   ,113
-5,Pierwsze zdanie…,Magda podkradła Wojtkowi cukierki.,"Wojtek postanowił, że zaciągnie się do wojska.",113
-4,Pierwsze zdanie…,Zygmunt pomógł Jakubowi w pracy domowej.,Jakub jest mu bardzo za to wdzięczny.,101
-7,Pierwsze zdanie…,Grażyna zbudowała zamek z piasku.,W szałasie Roberta wybuchł pożar.,113
-6,Pierwsze zdanie…,Alinie nie sprawia problemu matematyka.,Postanowiła więc zdawać w tym roku na politechnikę.,101
-3,Pierwsze zdanie…,Kamil uderzył niechcący Monikę.,Monika bardzo nie lubi wątróbki.,113
+,F0,F0,F1,F2,corr
+0,Pierwsze zdanie…,Bartosz postanowił jeść więcej witamin.,Wprowadził do swojej diety jabłka.,Jabłka są zdrowe i Bartosz je lubi.   ,69
+2,Pierwsze zdanie…,Ewelina postanowiła zrobić bratu niespodziankę.,Kupiła Robertowi chomika.,Robert od dawna marzył o własnym zwierzątku.,69
+1,Pierwsze zdanie…,Bartosz chętnie je owoce.,Lubi bardzo pomarańcze.,Zatańcz ze mną mój autobusie.   ,81
+5,Pierwsze zdanie…,Magda jest dużym łasuchem.,Podkradła Wojtkowi cukierki.,"Wojtek postanowił, że zaciągnie się do wojska.",81
+4,Pierwsze zdanie…,Zygmunt jest dobrym przyjacielem.,Pomógł Jakubowi w pracy domowej.,Jakub jest mu bardzo za to wdzięczny.,69
+7,Pierwsze zdanie…,Grażyna lubi sama się bawić.,Zbudowała zamek z piasku.,W szałasie Roberta wybuchł pożar.,81
+6,Pierwsze zdanie…,Alina jest wyjątkowo uzdolnioną uczennicą,Nie sprawia jej problemu matematyka.,Postanowiła więc zdawać w tym roku na politechnikę.,69
+3,Pierwsze zdanie…,Kamil bywa bardzo nieuważny.,Uderzył niechcący Monikę.,Monika bardzo nie lubi wątróbki.,81
