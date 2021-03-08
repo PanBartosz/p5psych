@@ -236,7 +236,7 @@ function setupExp(){
         var url = 'http://localhost:5000/saveData';
     }
 
-    exp = new Experiment(url, 'centeringf' + '_' + version);
+    exp = new Experiment(url, 'centeringt' + '_' + version);
 
 
     var exp_info_box = new ExpInfoBox({name : 'expinfo', data: ['płeć (K/M/inne)', 'wiek'], additional_info : {'uczestnik' : Math.random().toString(36).substring(7)}});
